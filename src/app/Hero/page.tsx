@@ -11,21 +11,11 @@ interface HeroSectionProps {
   setIsDrawerOpen: (isOpen: boolean) => void;
 }
 
-export default function HeroSection({ isDrawerOpen, setIsDrawerOpen }: HeroSectionProps) {
+export default function HeroSection({ setIsDrawerOpen }: HeroSectionProps) {
   const [isPaperVisible, setIsPaperVisible] = useState(false);
-  const [currentImage, setCurrentImage] = useState<string | null>(null);
   const router = useRouter();
 
-  const handleSentenceClick = (index: number) => {
-    const selectedSentence = SENTENCE_DATA[index];
-    if (selectedSentence.image) {
-      setCurrentImage(selectedSentence.image);
-    }
-  };
-
-  const closeImageModal = () => {
-    setCurrentImage(null);
-  };
+  const sentences = SENTENCE_DATA.map((data) => data.text);
 
   return (
     <section className="w-full h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-600 to-purple-700 overflow-hidden relative">
@@ -40,30 +30,22 @@ export default function HeroSection({ isDrawerOpen, setIsDrawerOpen }: HeroSecti
             Hi, I am Kah Yee!
           </motion.h2>
 
-          <motion.div
+          <motion.p
             initial={{ opacity: 0, x: -70 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-3xl space-y-4"
+            className="text-3xl"
           >
-            {SENTENCE_DATA.map((sentence, index) => (
-              <div
-                key={index}
-                onClick={() => handleSentenceClick(index)}
-                className="cursor-pointer"
-              >
-                <Typewriter
-                  words={[sentence.text]}
-                  loop={1}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={2000}
-                />
-              </div>
-            ))}
-          </motion.div>
+            <Typewriter
+              words={sentences}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={2000}
+            />
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -106,12 +88,14 @@ export default function HeroSection({ isDrawerOpen, setIsDrawerOpen }: HeroSecti
       {isPaperVisible && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="w-[900px] max-h-[80vh] bg-white border border-gray-300 rounded-lg shadow-lg p-6 overflow-y-auto flex">
+
             <div className="w-[30%] flex flex-col items-center justify-center pr-6 sticky top-0">
               <img
                 src="./assets/general/HorKahYee.jpg"
                 alt="Kah Yee"
                 className="w-full h-auto rounded-lg shadow-md"
               />
+              {/* View Profile Button */}
               <button
                 onClick={() => router.push("/Profile")}
                 className="mt-4 px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition duration-300 cursor-pointer"
@@ -119,61 +103,46 @@ export default function HeroSection({ isDrawerOpen, setIsDrawerOpen }: HeroSecti
                 View My Profile
               </button>
             </div>
+
+            {/* Content Section */}
             <div className="w-[70%] space-y-4 text-gray-700">
               <h2 className="font-caveat-brush text-2xl mb-4">Here is a Letter for You:</h2>
               <h3 className="text-lg font-bold mb-4">"A Glimpse into My Journey"</h3>
               <p>
-                She is an accomplished technology enthusiast and certified cloud professional with expertise in cloud computing, artificial intelligence, and data analytics. Holding multiple prestigious credentials, including Google Cloud Data Analytics, Computing Foundations, Cybersecurity Certifications, and Alibaba Cloud Certified Associate, she is also an AWS AI & ML Scholar, continuously expanding her technical expertise through programs like Google Cloud Skill Boost and Alibaba Cloud Academy.
-              </p>
-              <p>
-                A polyglot fluent in seven languages — Chinese, Malay, English, Cantonese, Hokkien, French, and Japanese — she excels in cross-cultural communication and global collaboration. Her leadership acumen is evident through her tenure at Google Developer Group On Campus (GDGoC USM), where she has served as EXCO of the Event Planning and Culture Development (EPCD) Department and now leads the department. As Project Director of TechFest USM, she drives university-wide innovation and industry engagement.
-              </p>
-              <p>
-                With a strong technical portfolio, she has led data-driven projects in predictive analytics for market trends and wine quality by utilizing advanced ML models such as Random Forest Classifier, Support Vector Machines, and Naïve Bayes algorithms. She has also developed object-oriented software solutions in C++, including a bakery management system and AI-powered image classification models that push the boundaries of deep learning.
-              </p>
-              <p>
-                Beyond her technical work, she is a sought-after speaker, event curator, and thought leader. She has emceed high-profile workshops, facilitated technical training sessions, and delivered insightful talks on front-end development with Angular. As a core organizer of national-level hackathons — the MY Universities Hackathon — she plays a key role in fostering technological excellence among emerging innovators. Her contributions have been recognized with accolades such as the Silver Award at PIITRAM 2023 with an official certification from MYIPO for her innovation.
-              </p>
-              <p>
-                Committed to lifelong learning, she actively participates in global programs like Google I/O, AI Skills Quest, GCPBoleh, and The Arcade Program. Currently, she is deepening her expertise in PostgreSQL and Oracle SQL to strengthen her enterprise data management and cloud infrastructure skills.
-              </p>
-              <p>
-                Outside of her professional pursuits, she enjoys badminton, chess, and photography, embodying a well-rounded and dynamic approach to excellence.
-              </p>
-              <div className="mt-8 flex justify-end">
-                <button
-                  onClick={() => setIsPaperVisible(false)}
-                  className="px-4 py-2 bg-red-500 mb-3 text-white rounded-lg hover:bg-red-600 transition-colors duration-300 cursor-pointer"
-                >
-                  Close
-                </button>
-              </div>
+              She is an accomplished technology enthusiast and certified cloud professional with expertise in cloud computing, artificial intelligence, and data analytics. Holding multiple prestigious credentials, including Google Cloud Data Analytics, Computing Foundations, Cybersecurity Certifications, and Alibaba Cloud Certified Associate, she is also an AWS AI & ML Scholar, continuously expanding her technical expertise through programs like Google Cloud Skill Boost and Alibaba Cloud Academy.
+            </p>
+            <p>
+              A polyglot fluent in seven languages — Chinese, Malay, English, Cantonese, Hokkien, French, and Japanese — she excels in cross-cultural communication and global collaboration. Her leadership acumen is evident through her tenure at Google Developer Group On Campus (GDGoC USM), where she has served as EXCO of the Event Planning and Culture Development (EPCD) Department and now leads the department. As Project Director of TechFest USM, she drives university-wide innovation and industry engagement.
+            </p>
+            <p>
+              With a strong technical portfolio, she has led data-driven projects in predictive analytics for market trends and wine quality by utilizing advanced ML models such as Random Forest Classifier, Support Vector Machines, and Naïve Bayes algorithms. She has also developed object-oriented software solutions in C++, including a bakery management system and AI-powered image classification models that push the boundaries of deep learning.
+            </p>
+            <p>
+              Beyond her technical work, she is a sought-after speaker, event curator, and thought leader. She has emceed high-profile workshops, facilitated technical training sessions, and delivered insightful talks on front-end development with Angular. As a core organizer of national-level hackathons — the MY Universities Hackathon — she plays a key role in fostering technological excellence among emerging innovators. Her contributions have been recognized with accolades such as the Silver Award at PIITRAM 2023 with an official certification from MYIPO for her innovation.
+            </p>
+            <p>
+              Committed to lifelong learning, she actively participates in global programs like Google I/O, AI Skills Quest, GCPBoleh, and The Arcade Program. Currently, she is deepening her expertise in PostgreSQL and Oracle SQL to strengthen her enterprise data management and cloud infrastructure skills.
+            </p>
+            <p>
+              Outside of her professional pursuits, she enjoys badminton, chess, and photography, embodying a well-rounded and dynamic approach to excellence.
+            </p>
+
+            {/* Close Button */}
+            <div className="mt-8 flex justify-end">
+              <button
+                onClick={() => setIsPaperVisible(false)}
+                className="px-4 py-2 bg-red-500 mb-3 text-white rounded-lg hover:bg-red-600 transition-colors duration-300 cursor-pointer"
+              >
+                Close
+              </button>
+          </div>
             </div>
           </div>
         </div>
       )}
 
-      {/* Image Modal */}
-      {currentImage && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg relative">
-            <img
-              src={currentImage}
-              alt="Sentence Image"
-              className="max-w-full max-h-[80vh]"
-            />
-            <button
-              onClick={closeImageModal}
-              className="absolute top-2 right-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors duration-300 cursor-pointer"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
-
       {/* Blur Background */}
-      {(isPaperVisible || currentImage) && <div className="fixed inset-0 backdrop-blur-sm z-40"></div>}
+      {isPaperVisible && <div className="fixed inset-0 backdrop-blur-sm z-40"></div>}
 
       {/* Background Animation */}
       <div className="absolute inset-0 overflow-hidden z-0">
