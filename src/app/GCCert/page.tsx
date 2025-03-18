@@ -103,7 +103,7 @@ const GCCert = () => {
                   <img
                     src={cert.img}
                     alt={cert.name}
-                    className="w-full h-83 rounded-xl"
+                    className="w-125 h-83 rounded-xl"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-black/80 text-white p-4 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0">
                     <h4 className="font-bold text-left">Skills:</h4>
