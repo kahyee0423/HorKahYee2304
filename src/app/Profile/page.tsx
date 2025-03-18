@@ -22,7 +22,7 @@ const Profile = () => {
         Know More About Me
       </motion.h1>
 
-      <div className="flex justify-between items-start p-4 gap-8 flex-wrap">
+      <div className="flex justify-between items-start p-4 gap-8 flex-wrap ml-12">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -57,12 +57,12 @@ const Profile = () => {
             <Link
               key={index}
               href={profile.href}
-              className="flex items-center justify-start w-[38rem] h-24 bg-white/10 border-2 border-white/20 rounded-lg cursor-pointer transition-all duration-300 hover:bg-white/20 hover:-translate-y-1 hover:shadow-lg backdrop-blur-sm text-white text-xl px-4 no-underline"
+              className="flex items-center justify-start w-[32rem] h-24 bg-white/10 border-2 border-white/20 rounded-lg cursor-pointer transition-all duration-300 hover:bg-white/20 hover:-translate-y-1 hover:shadow-lg backdrop-blur-sm text-white text-xl px-4 no-underline"
             >
               <img
                 src={profile.img}
                 alt={profile.alt}
-                className="w-14 h-auto mr-4"
+                className="w-19 h-auto mr-14"
               />
               <span>{profile.text}</span>
             </Link>
@@ -78,7 +78,7 @@ const Profile = () => {
       >
         <button
           onClick={() => router.push("/")}
-          className="px-8 py-3 bg-gradient-to-r from-orange-400 to-pink-500 border-none rounded-lg text-white text-lg cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          className="inline-block px-8 py-3 bg-[#7e61e7] text-white font-bold rounded-lg mt-[70px] outline outline-1.5 outline-transparent transition-all duration-300 ease-in-out hover:bg-black hover:from-transparent hover:to-transparent hover:text-[#a993fe] hover:outline-[#a993fe] hover:scale-105 cursor-pointer"
         >
           Back To Home
         </button>

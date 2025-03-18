@@ -75,9 +75,9 @@ const GCCert = () => {
       </div>
 
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
+        initial={{ opacity: 0, scale: 0.3 }} 
+        animate={{ opacity: 1, scale: 1.0 }}  
+        transition={{ duration: 0.8, delay: 0.6 }} 
         className="text-center mb-8 text-xl font-bold"
       >
         <p>Total Skill Badges: {filteredCerts.length}</p>
@@ -136,11 +136,11 @@ const GCCert = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
-        className="mt-8 mb-16"
+        className="mt-8 mb-16 text-center"
       >
         <button
           onClick={() => router.push("/")}
-          className="px-8 py-3 bg-gradient-to-r from-orange-400 to-pink-500 border-none rounded-lg text-white text-lg cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          className="inline-block px-8 py-3 bg-[#7e61e7] text-white font-bold rounded-lg mt-[70px] outline outline-1.5 outline-transparent transition-all duration-300 ease-in-out hover:bg-black hover:from-transparent hover:to-transparent hover:text-[#a993fe] hover:outline-[#a993fe] hover:scale-105 cursor-pointer"
         >
           Back To Home
         </button>

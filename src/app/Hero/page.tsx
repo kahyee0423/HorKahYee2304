@@ -55,7 +55,7 @@ export default function HeroSection({ setIsDrawerOpen }: HeroSectionProps) {
           >
             <a
               href="https://drive.google.com/file/d/12BnFbBJ5briyZb-1JaFojQ33_ealr7d_/view?usp=sharing"
-              className="inline-block px-8 py-3 bg-gradient-to-r from-[#a993fe] to-[#7e61e7] text-white font-bold rounded-lg mt-[70px] outline outline-1.5 outline-transparent transition-all duration-300 ease-in-out hover:bg-black hover:from-transparent hover:to-transparent hover:outline-[#a993fe] hover:scale-105"
+              className="inline-block px-8 py-3 bg-gradient-to-r from-[#a993fe] to-[#7e61e7] text-white font-bold rounded-lg mt-[70px] outline outline-1.5 outline-transparent transition-all duration-300 ease-in-out hover:bg-black hover:from-transparent hover:to-transparent hover:text-[#a993fe] hover:outline-[#a993fe] hover:scale-105"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -63,7 +63,7 @@ export default function HeroSection({ setIsDrawerOpen }: HeroSectionProps) {
             </a>
             <button
               onClick={() => setIsDrawerOpen(true)}
-              className="inline-block px-8 py-3 bg-gradient-to-r from-[#a993fe] to-[#7e61e7] text-white font-bold rounded-lg mt-[70px] outline outline-1.5 outline-transparent transition-all duration-300 ease-in-out hover:bg-black hover:from-transparent hover:to-transparent hover:outline-[#a993fe] hover:scale-105"
+              className="inline-block px-8 py-3 bg-gradient-to-r from-[#a993fe] to-[#7e61e7] text-white font-bold rounded-lg mt-[70px] outline outline-1.5 outline-transparent transition-all duration-300 ease-in-out hover:bg-black hover:from-transparent hover:to-transparent hover:text-[#a993fe] hover:outline-[#a993fe] hover:scale-105 cursor-pointer"
             >
               Get in Touch
             </button>
@@ -98,7 +98,7 @@ export default function HeroSection({ setIsDrawerOpen }: HeroSectionProps) {
               {/* View Profile Button */}
               <button
                 onClick={() => router.push("/Profile")}
-                className="mt-4 px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition duration-300 cursor-pointer"
+                className="mt-4 px-4 py-2 text-sm font-semibold bg-[#7e61e7] text-white font-bold rounded-lg outline outline-1.5 outline-transparent transition-all duration-300 ease-in-out hover:bg-black hover:from-transparent hover:to-transparent hover:text-[#a993fe] hover:outline-[#a993fe] hover:scale-105 cursor-pointer"
               >
                 View My Profile
               </button>
