@@ -55,7 +55,7 @@ export default function HeroSection({ setIsDrawerOpen }: HeroSectionProps) {
           >
             <a
               href="https://drive.google.com/file/d/12BnFbBJ5briyZb-1JaFojQ33_ealr7d_/view?usp=sharing"
-              className="inline-block px-8 py-3 bg-gradient-to-r from-[#a993fe] to-[#7e61e7] text-white font-bold rounded-lg mt-[70px] outline outline-1.5 outline-transparent transition-all duration-300 ease-in-out hover:bg-black hover:from-transparent hover:to-transparent hover:text-[#a993fe] hover:outline-[#a993fe] hover:scale-105"
+              className="inline-block px-8 py-3 bg-gradient-to-r from-[#a993fe] to-[#7e61e7] text-white font-bold rounded-lg mt-[70px] outline outline-1.5 outline-transparent transition-all duration-300 ease-in-out hover:bg-black hover:from-transparent hover:to-transparent hover:text-[#a993fe] hover:outline-[#a993fe]"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -63,7 +63,7 @@ export default function HeroSection({ setIsDrawerOpen }: HeroSectionProps) {
             </a>
             <button
               onClick={() => setIsDrawerOpen(true)}
-              className="inline-block px-8 py-3 bg-gradient-to-r from-[#a993fe] to-[#7e61e7] text-white font-bold rounded-lg mt-[70px] outline outline-1.5 outline-transparent transition-all duration-300 ease-in-out hover:bg-black hover:from-transparent hover:to-transparent hover:text-[#a993fe] hover:outline-[#a993fe] hover:scale-105 cursor-pointer"
+              className="inline-block px-8 py-3 bg-gradient-to-r from-[#a993fe] to-[#7e61e7] text-white font-bold rounded-lg mt-[70px] outline outline-1.5 outline-transparent transition-all duration-300 ease-in-out hover:bg-black hover:from-transparent hover:to-transparent hover:text-[#a993fe] hover:outline-[#a993fe] cursor-pointer"
             >
               Get in Touch
             </button>

@@ -62,57 +62,67 @@ export const SENTENCE_DATA = [
   {
     text: "A Year 2 USM Computer Science Student",
     image: "",
-    content: "This is the content for the first sentence.",
+    content: "A Year 2 USM Computer Science Student",
   },
   {
     text: "Head of Department @ EPCD GDGoC USM",
     image: "./assets/profile/epcd.jpg",
-    content: "This is the content for the second sentence.",
+    content: "Head of Department @ EPCD GDGoC USM",
   },
   {
     text: "AWS AI & ML Scholar",
     image: "./assets/profile/AI&ML_Cert.jpg",
-    content: "This is the content for the third sentence.",
+    content: "AWS AI & ML Scholar",
   },
   {
     text: "Google Cloud Data Analytics Certified",
     image: "./assets/profile/data-cert.png",
-    content: "This is the content for the fourth sentence.",
+    content: "Google Cloud Data Analytics Certified",
   },
   {
     text: "Google Cloud Computing Certified",
     image: "./assets/profile/cloud-cert-2.png",
-    content: "This is the content for the fifth sentence.",
+    content: "Google Cloud Computing Certified",
   },
   {
     text: "Google Cloud Cybersecurity Certified",
     image: "./assets/profile/cyber-cert.png",
-    content: "This is the content for the sixth sentence.",
+    content: "Google Cloud Cybersecurity Certified",
   },
   {
     text: "Google Cloud Certified Innovator",
     image: "",
-    content: "This is the content for the seventh sentence.",
+    content: "Google Cloud Certified Innovator",
   },
   {
     text: "Alibaba Cloud Certified Associate",
     image: "./assets/profile/alibaba_associate.png",
-    content: "This is the content for the eighth sentence.",
+    content: "Alibaba Cloud Certified Associate",
   },
   {
     text: "Oracle Cloud Infrastructure 2024 Certified AI Foundations Associate",
     image: "./assets/profile/Oracle_Cloud_AI.jpg",
-    content: "This is the content for the ninth sentence.",
+    content: "Oracle Cloud Infrastructure 2024 Certified AI Foundations Associate",
   },
   {
     text: "Oracle Cloud Infrastructure 2024 Data Certified Foundations Associate",
     image: "./assets/profile/Oracle_Cloud_Data.jpg",
-    content: "This is the content for the tenth sentence.",
+    content: "Oracle Cloud Infrastructure 2024 Data Certified Foundations Associate",
   },
   {
     text: "GitHub Foundations Certified",
     image: "./assets/profile/github-cert.png",
-    content: "This is the content for the eleventh sentence.",
+    content: "GitHub Foundations Certified",
+  },
+  {
+    text: "Oracle Fusion Cloud Applications ERP Certified Foundations Associate",
+    image: "./assets/profile/erp-cert.jpg",
+    content: "Oracle Fusion Cloud Applications ERP Certified Foundations Associate",
+  },
+  {
+    text: "Oracle Cloud Infrastructure 2024 Certified Foundations Associate",
+    image: "./assets/profile/foundations-cert.jpg",
+    content: "Oracle Cloud Infrastructure 2024 Certified Foundations Associate",
   },
 ];
 
