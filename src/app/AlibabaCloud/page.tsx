@@ -59,7 +59,7 @@ const AlibabaCloud = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 text-white overflow-y-auto">
       <AuroraGradientAnimated />
-      <section className="p-8">
+      <section className="p-2">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
