@@ -116,6 +116,176 @@ export const SENTENCE_DATA = [
   },
 ];
 
+export const ALIBABA_CERT = [
+  {
+    image1: `./assets/AlibabaCloudPic/img-01a.png`,
+    image2: `./assets/AlibabaCloudPic/img-01b.png`,
+    code: "ACFW267240900143401",
+    expire: "Sep 13, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-02a.png`,
+    image2: `./assets/AlibabaCloudPic/img-02b.png`,
+    code: "ACFW281240900143416",
+    expire: "Sep 13, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-03a.png`,
+    image2: `./assets/AlibabaCloudPic/img-03b.png`,
+    code: "ACFW266240900143428",
+    expire: "Sep 13, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-04a.png`,
+    image2: `./assets/AlibabaCloudPic/img-04b.png`,
+    code: "ACFW270240900143436",
+    expire: "Sep 13, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-05a.png`,
+    image2: `./assets/AlibabaCloudPic/img-05b.png`,
+    code: "ACFW268240900143448",
+    expire: "Sep 13, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-06a.png`,
+    image2: `./assets/AlibabaCloudPic/img-06b.png`,
+    code: "ACFW280240900143454",
+    expire: "Sep 13, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-07a.png`,
+    image2: `./assets/AlibabaCloudPic/img-07b.png`,
+    code: "ACFW291240900143483",
+    expire: "Sep 13, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-08a.png`,
+    image2: `./assets/AlibabaCloudPic/img-08b.png`,
+    code: "ACFW262240900143489",
+    expire: "Sep 13, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-09a.png`,
+    image2: `./assets/AlibabaCloudPic/img-09b.png`,
+    code: "ACFW255240900143501",
+    expire: "Sep 13, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-10a.png`,
+    image2: `./assets/AlibabaCloudPic/img-10b.png`,
+    code: "ACFW140240900143619",
+    expire: "Sep 13, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-11a.png`,
+    image2: `./assets/AlibabaCloudPic/img-11b.png`,
+    code: "ACFW173240900143623",
+    expire: "Sep 13, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-12a.png`,
+    image2: `./assets/AlibabaCloudPic/img-12b.png`,
+    code: "ACFW93240900143624",
+    expire: "Sep 13, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-13a.png`,
+    image2: `./assets/AlibabaCloudPic/img-13b.png`,
+    code: "ACFW248240900145061",
+    expire: "Sep 16, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-14a.png`,
+    image2: `./assets/AlibabaCloudPic/img-14b.png`,
+    code: "ACFW125240900157898",
+    expire: "Sep 30, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-15a.jpg`,
+    image2: `./assets/AlibabaCloudPic/img-15b.png`,
+    code: "ACFC51241000159480",
+    expire: "Oct 02, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-16a.jpg`,
+    image2: `./assets/AlibabaCloudPic/img-16b.png`,
+    code: "ACFC06241000159302",
+    expire: "Oct 02, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-17a.jpg`,
+    image2: `./assets/AlibabaCloudPic/img-17b.png`,
+    code: "ACFC05241000159235",
+    expire: "Oct 02, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-18a.jpg`,
+    image2: `./assets/AlibabaCloudPic/img-18b.png`,
+    code: "ACFC03241000159230",
+    expire: "Oct 02, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-19a.jpg`,
+    image2: `./assets/AlibabaCloudPic/img-19b.png`,
+    code: "ACFW240241000159243",
+    expire: "Oct 02, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-20a.jpg`,
+    image2: `./assets/AlibabaCloudPic/img-20b.png`,
+    code: "ACFW239241000159483",
+    expire: "Oct 02, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-21a.jpg`,
+    image2: `./assets/AlibabaCloudPic/img-21b.png`,
+    code: "ACFC04241000159249",
+    expire: "Oct 02, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-22a.jpg`,
+    image2: `./assets/AlibabaCloudPic/img-22b.png`,
+    code: "ACFW237241000159475",
+    expire: "Oct 02, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-23a.jpg`,
+    image2: `./assets/AlibabaCloudPic/img-23b.png`,
+    code: "ACFC20241000159471",
+    expire: "Oct 02, 2026",
+  },
+  {
+    image1: `./assets/AlibabaCloudPic/img-24a.jpg`,
+    image2: `./assets/AlibabaCloudPic/img-24b.png`,
+    code: "ACFS01241000160063",
+    expire: "Oct 03, 2026",
+  },
+];
+
+export const ALIBABA_SPECIALTY_CERT = [
+  {
+    image: `./assets/AlibabaCloudPic/img-901.jpg`,
+    code: "SPEC08241000159884",
+    expire: "Oct 03, 2026",
+  },
+  {
+    image: `./assets/AlibabaCloudPic/img-902.jpg`,
+    code: "SPEC02241200181222",
+    expire: "Dec 04, 2026",
+  },
+  {
+    image: `./assets/AlibabaCloudPic/img-903.jpg`,
+    code: "SPEC03250100186775",
+    expire: "Jan 27, 2027",
+  },
+  {
+    image: `./assets/AlibabaCloudPic/img-904.jpg`,
+    code: "SPEC04250100186774",
+    expire: "Jan 27, 2027",
+  },
+];
+
 export const GOOGLE_CLOUD_CERT = [
   {
     img: `./assets/GoogleCloudCert/img-01.png`,

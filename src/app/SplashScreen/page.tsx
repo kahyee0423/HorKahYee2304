@@ -11,13 +11,13 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
   useEffect(() => {
     const animationTimer = setTimeout(() => {
       setShowImage(true);
-    }, 2400);
+    }, 1000);
 
     const completionTimer = setTimeout(() => {
       if (typeof onComplete === "function") {
         onComplete();
       }
-    }, 5500); 
+    }, 3000); 
 
     return () => {
       clearTimeout(animationTimer);
