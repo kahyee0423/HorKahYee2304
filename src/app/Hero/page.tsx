@@ -95,7 +95,6 @@ export default function HeroSection({ setIsDrawerOpen }: HeroSectionProps) {
                 alt="Kah Yee"
                 className="w-full h-auto rounded-lg shadow-md"
               />
-              {/* View Profile Button */}
               <button
                 onClick={() => router.push("/Profile")}
                 className="mt-4 px-4 py-2 text-sm font-semibold bg-[#7e61e7] text-white font-bold rounded-lg outline outline-1.5 outline-transparent transition-all duration-300 ease-in-out hover:bg-black hover:from-transparent hover:to-transparent hover:text-[#a993fe] hover:outline-[#a993fe] hover:scale-105 cursor-pointer"
