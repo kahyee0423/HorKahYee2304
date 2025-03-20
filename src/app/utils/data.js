@@ -1225,3 +1225,92 @@ export const ORACLE_CLOUD = [
     obtainedDate: "07 Dec 2024"
   },
 ];
+
+// data.js
+export const TEAM_DATA = {
+  introduction: {
+    image: "/assets/CoreTeamGDSCPic/img-04.png",
+    title: "Meet Kah Yee",
+    description:
+      "She is here with a voracious hunger to explore the arena by the adage 'Less is More'. Be that as it may, Kah Yee is more passionate about revealing eras and community development in her unique way. Truth be told, it is irrevocably her urge to discover how her abilities can revolutionize the planet.",
+    footer: "- Kah Yee, EPCD Member at GDSC USM",
+  },
+  onboardingSession: {
+    images: [
+      "/assets/CoreTeamGDSCPic/img-01.png",
+      "/assets/CoreTeamGDSCPic/img-02.png",
+    ],
+    title: "The Genesis of My Journey: GDSC USM Onboarding Session 23/24",
+    description: "Where the story begins...",
+  },
+  workshopEmcee: {
+    title: "Commanding the Stage: My Debut as Workshop Emcee",
+    description:
+      "My debut as a workshop emcee was a thrilling challenge, refining my skills in audience engagement and event management.",
+    subTitle: "From Design to Interaction: Figma Prototyping Workshop",
+    image: "/assets/CoreTeamGDSCPic/img-03.jpg",
+  },
+  certification: {
+    image: "/assets/CoreTeamGDSCPic/gdsc-cert.jpg",
+    title: "From Commitment to Certification: Core Team Member at EPCD GDSC USM 23/24",
+    description:
+      "Achieving Core Team Member certification at EPCD GDSC USM 23/24 underscores my dedication and teamwork.",
+  },
+  leadingTheWay: {
+    title: "Leading the Way: 24/25 Academic Session",
+    sections: [
+      {
+        type: "hod",
+        image: "/assets/CoreTeamGDSCPic/hod.png",
+        title: "Head of Department: Event Planning and Culture Development 24/25",
+        description:
+          "Meet the inspiring speakers who will share their knowledge and experiences to empower the next generation of innovators.",
+      },
+      {
+        type: "hackathon",
+        title: "Organizing Committee: MY Universities Hackathon",
+        description:
+          "Meet the inspiring speakers who will share their knowledge and experiences to empower the next generation of innovators.",
+        carouselImages: [
+          "/assets/CoreTeamGDSCPic/hack-1.jpg",
+          "/assets/CoreTeamGDSCPic/hack-2.jpg",
+          "/assets/CoreTeamGDSCPic/hack-3.jpg",
+          "/assets/CoreTeamGDSCPic/hack-4.jpg",
+          "/assets/CoreTeamGDSCPic/hack-5.jpg",
+          "/assets/CoreTeamGDSCPic/hack-6.jpg",
+          "/assets/CoreTeamGDSCPic/hack-7.jpg",
+        ],
+      },
+      {
+        type: "speakers",
+        title: "Speaker at Web Weavers: Focus on Angular",
+        description:
+          "Meet the inspiring speakers who will share their knowledge and experiences to empower the next generation of innovators.",
+        carouselImages: [
+          "/assets/CoreTeamGDSCPic/sp-1.png",
+          "/assets/CoreTeamGDSCPic/sp-2.png",
+          "/assets/CoreTeamGDSCPic/sp-3.jpg",
+          "/assets/CoreTeamGDSCPic/sp-4.jpg",
+          "/assets/CoreTeamGDSCPic/sp-5.jpg",
+          "/assets/CoreTeamGDSCPic/sp-6.jpg",
+          "/assets/CoreTeamGDSCPic/sp-7.jpg",
+        ],
+      },
+      {
+        type: "project-director",
+        title: "Project Director at TechFest USM",
+        description:
+          "Meet the inspiring speakers who will share their knowledge and experiences to empower the next generation of innovators.",
+        carouselImages: [
+          "/assets/CoreTeamGDSCPic/sp-1.png",
+          "/assets/CoreTeamGDSCPic/sp-2.png",
+          "/assets/CoreTeamGDSCPic/sp-3.jpg",
+          "/assets/CoreTeamGDSCPic/sp-4.jpg",
+          "/assets/CoreTeamGDSCPic/sp-5.jpg",
+          "/assets/CoreTeamGDSCPic/sp-6.jpg",
+          "/assets/CoreTeamGDSCPic/sp-7.jpg",
+        ],
+      },
+    ],
+  },
+};
