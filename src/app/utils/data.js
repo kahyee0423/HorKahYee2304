@@ -8,7 +8,7 @@ export const EXPERIENCE = [
       "I managed event structuring, including scheduling, venue arrangements, and role assignments to ensure smooth operations.",
       "I facilitated collaboration between teams, ensuring clear communication and alignment on event objectives, content delivery, and logistics.",
     ],
-    route: "/core-team-gdsc",
+    route: "/CoreTeamGDSC",
   },
   {
     title: "Project Director at TechFest: Innovate with Google Technologies",
@@ -1188,14 +1188,14 @@ export const CERTIFICATIONS = [
     category: "Google Cloud",
     title: "Google Cloud Certified Professional",
     link: "/GCCert",
-    color: "from-yellow-400 to-orange-500",
+    color: "from-blue-400 to-indigo-500",
   },
   {
     id: 4,
     category: "Alibaba Cloud",
     title: "Alibaba Cloud Certified Expert",
     link: "/AlibabaCloud",
-    color: "from-blue-400 to-indigo-500",
+    color: "from-yellow-400 to-orange-500",
   },
 ];
 
