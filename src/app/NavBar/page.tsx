@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed w-full z-50 top-6">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link href="/" className="text-white text-2xl font-bold">
@@ -56,36 +56,47 @@ export default function Navbar() {
             </button>
           </div>
 
-          <div className="hidden sm:flex sm:items-center space-x-8">
-            <Link
-              href="/"
-              className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-lg font-geist-sans font-medium relative group"
+          <nav className="hidden sm:flex sm:items-center space-x-8">
+            <button
+              onClick={() => document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" })}
+              className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-lg font-medium relative group"
             >
               Home
               <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#a993fe] to-[#7e61e7] rounded-full transition-all duration-300 ease-in-out transform -translate-x-1/2 group-hover:w-full"></span>
-            </Link>
-            <Link
-              href="/skills"
-              className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-lg font-geist-sans font-medium relative group"
-            >
-              Skills
-              <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#a993fe] to-[#7e61e7] rounded-full transition-all duration-300 ease-in-out transform -translate-x-1/2 group-hover:w-full"></span>
-            </Link>
-            <Link
-              href="/experience"
-              className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-lg font-geist-sans font-medium relative group"
+            </button>
+
+            <button
+              onClick={() => document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" })}
+              className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-lg font-medium relative group"
             >
               Experience
               <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#a993fe] to-[#7e61e7] rounded-full transition-all duration-300 ease-in-out transform -translate-x-1/2 group-hover:w-full"></span>
-            </Link>
-            <Link
-              href="/projects"
-              className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-lg font-geist-sans font-medium relative group"
+            </button>
+
+            <button
+              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+              className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-lg font-medium relative group"
             >
               Projects
               <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#a993fe] to-[#7e61e7] rounded-full transition-all duration-300 ease-in-out transform -translate-x-1/2 group-hover:w-full"></span>
-            </Link>
-          </div>
+            </button>
+
+            <button
+              onClick={() => document.getElementById("certification")?.scrollIntoView({ behavior: "smooth" })}
+              className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-lg font-medium relative group"
+            >
+              Certification
+              <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#a993fe] to-[#7e61e7] rounded-full transition-all duration-300 ease-in-out transform -translate-x-1/2 group-hover:w-full"></span>
+            </button>
+
+            <button
+              onClick={() => document.getElementById("certification")?.scrollIntoView({ behavior: "smooth" })}
+              className="text-white hover:text-gray-200 px-3 py-2 rounded-md text-lg font-medium relative group"
+            >
+              Awards
+              <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#a993fe] to-[#7e61e7] rounded-full transition-all duration-300 ease-in-out transform -translate-x-1/2 group-hover:w-full"></span>
+            </button>
+          </nav>
         </div>
       </div>
 

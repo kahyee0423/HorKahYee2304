@@ -5,8 +5,8 @@ import { FaAward } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { CERTIFICATE_ICONS } from "../data";
-import { PROFILE_LINKS } from "../data";
+import { CERTIFICATE_ICONS } from "../utils/data";
+import { PROFILE_LINKS } from "../utils/data";
 
 const Profile = () => {
   const router = useRouter();

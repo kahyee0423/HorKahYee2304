@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-import { SENTENCE_DATA } from "../data";
+import { SENTENCE_DATA } from "../utils/data";
 
 interface HeroSectionProps {
   isDrawerOpen: boolean;
@@ -18,14 +18,15 @@ export default function HeroSection({ setIsDrawerOpen }: HeroSectionProps) {
   const sentences = SENTENCE_DATA.map((data) => data.text);
 
   return (
-    <section className="w-full h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-600 to-purple-700 overflow-hidden relative">
+    <section className="w-full h-screen flex flex-col items-center justify-center relative">
       <div className="flex-1 flex items-center w-full">
-        <div className="flex-1 flex flex-col items-start justify-center text-white px-16 space-y-8 relative z-10 top-7">
+        <div className="flex-1 flex flex-col items-start justify-center text-white px-16 space-y-8 relative z-10 top-7 cursor-pointer">
           <motion.h2
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-pink-400"
+            onClick={() => setIsPaperVisible(true)}
           >
             Hi, I am Kah Yee!
           </motion.h2>
@@ -103,7 +104,6 @@ export default function HeroSection({ setIsDrawerOpen }: HeroSectionProps) {
               </button>
             </div>
 
-            {/* Content Section */}
             <div className="w-[70%] space-y-4 text-gray-700">
               <h2 className="font-caveat-brush text-2xl mb-4">Here is a Letter for You:</h2>
               <h3 className="text-lg font-bold mb-4">"A Glimpse into My Journey"</h3>
@@ -139,11 +139,7 @@ export default function HeroSection({ setIsDrawerOpen }: HeroSectionProps) {
           </div>
         </div>
       )}
-
-      {/* Blur Background */}
-      {isPaperVisible && <div className="fixed inset-0 backdrop-blur-sm z-40"></div>}
-
-      {/* Background Animation */}
+      {isPaperVisible && <div className="fixed inset-0 backdrop-blur-sm z-10"></div>}
       <div className="absolute inset-0 overflow-hidden z-0">
         {[...Array(20)].map((_, i) => (
           <motion.div

@@ -1,37 +1,84 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import SplashScreen from "./SplashScreen/page";
 import HeroSection from "./Hero/page";
 import Navbar from "./NavBar/page";
 import ContactDrawer from "./ContactDrawer/page";
+import Experience from "./Experience/page";
+import Projects from "./Projects/page";
+import Certification from "./Certification/page";
+
+const fadeInVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 1, ease: "easeInOut" } },
+};
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: -100 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, type: "spring", stiffness: 500, damping: 10 },
+  },
+};
 
 const Home = () => {
   const [showSplash, setShowSplash] = useState(true);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  useEffect(() => {
-    const hasSeenSplash = localStorage.getItem("hasSeenSplash");
-    if (hasSeenSplash === "true") {
-      setShowSplash(false); 
-    }
-  }, []);
-
-  const handleSplashComplete = () => {
-    localStorage.setItem("hasSeenSplash", "true"); 
-    setShowSplash(false);
-  };
-
   return (
     <>
       {showSplash ? (
-        <SplashScreen onComplete={handleSplashComplete} />
+        <SplashScreen onComplete={() => setShowSplash(false)} />
       ) : (
-        <div className="min-h-screen flex flex-col w-full">
+        <div className="min-h-screen flex flex-col w-full bg-gradient-to-br from-gray-800 to-purple-900 overflow-y-auto">
           <Navbar />
           <main className="flex-grow min-h-[calc(100vh-100px)]">
-            <HeroSection isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
+            <motion.section
+              id="hero"
+              variants={fadeInVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <HeroSection isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
+            </motion.section>
+
             <ContactDrawer isOpen={isDrawerOpen} setIsOpen={setIsDrawerOpen} />
+
+            <motion.section
+              id="experience"
+              variants={sectionVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <Experience />
+            </motion.section>
+
+            <motion.section
+              id="projects"
+              variants={fadeInVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <Projects />
+            </motion.section>
+
+            <motion.section
+              id="certification"
+              variants={sectionVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <Certification />
+            </motion.section>
           </main>
         </div>
       )}

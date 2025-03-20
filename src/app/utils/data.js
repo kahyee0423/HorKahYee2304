@@ -1,3 +1,92 @@
+export const EXPERIENCE = [
+  {
+    title:
+      "Head of Department at Event Planning and Culture Development at GDGoC USM",
+    date: "October 2024 - Present",
+    details: [
+      "I was responsible for overseeing the end-to-end planning, coordination, and execution of events",
+      "I managed event structuring, including scheduling, venue arrangements, and role assignments to ensure smooth operations.",
+      "I facilitated collaboration between teams, ensuring clear communication and alignment on event objectives, content delivery, and logistics.",
+    ],
+    route: "/core-team-gdsc",
+  },
+  {
+    title: "Project Director at TechFest: Innovate with Google Technologies",
+    date: "February 2025 - April 2025",
+    details: [
+      "The event offered an insightful and hands-on exploration of Google's cutting-edge technologies, covering AI, cloud computing, app development, and data analytics through engaging speaker sessions and interactive workshops.",
+      "A major highlight was the hands-on workshops, where participants built real-world applications, such as AI-powered chatbots, e-commerce prototypes, and interactive dashboards, demonstrating the practical capabilities of Google technologies.",
+      "The speaker sessions provided a structured learning path, with beginner-friendly introductions to core concepts and intermediate sessions focusing on integrated solutions across multiple technologies.",
+    ],
+    route: "/core-team-gdsc",
+  },
+  {
+    title: "Project Director at Web Weavers: Crafting the Digital Web",
+    date: "November 2024",
+    details: [
+      "The session provided a comprehensive introduction to front-end, back-end, and full-stack development and ensures that key concepts were presented in an accessible and engaging manner.",
+      "A major highlight of the talk in my session was the deep dive into front-end frameworks, with a special emphasis on Angular, showcasing both of its capabilities and real-world applications",
+    ],
+    route: "/core-team-gdsc",
+  },
+  {
+    title:
+      "Core Team Member at Event Planning and Culture Development Department at GDSC USM",
+    date: "November 2023 - October 2024",
+    details: [
+      "Worked on various Google technology related events, including Figma, Version Control System and GitHub",
+      "Actively Participated in every event planning for the club",
+    ],
+    route: "/core-team-gdsc",
+  },
+  {
+    title: "Emceeing a Figma workshop hosted by GDSC USM",
+    date: "December 2023",
+    details: [
+      "This workshop provided an accessible introduction to Front-End technology, ensuring that complex concepts were communicated with clarity.",
+      "The sessions on Wireframing and Prototyping were particularly well-received, designed to be both beginner-friendly and insightful. ",
+      "Participants were fully engaged during a hands-on Figma session, offering them a practical and enjoyable experience. ",
+      "The workshop concluded with resounding success, making all the efforts truly worthwhile.",
+    ],
+    route: "/core-team-gdsc",
+  },
+  {
+    title:
+      "Organizing Committee at MyHackathon in collaboration with GDSC USM, GDSC UTM and HackQuest",
+    date: "August 2024 - November 2024",
+    details: [
+      "The MY Universities Hackathon, hosted by USM, UTM, and HackQuest, offers a significant platform for Malaysian students to showcase their Web3 skills with a prize pool of 9,000 MYR.",
+      "Running from September to November 2024, the event features hands-on workshops and an in-person demo day.",
+      "Sponsored by major industry leaders, it promises valuable experience and exposure to top Web3 technologies.",
+      "This hackathon underscores a commitment to fostering innovation and expertise in the Web3 space among the next generation of developers.",
+    ],
+    route: "/core-team-gdsc",
+  },
+  {
+    title: "Speaker at Education Sharing Workshop hosted by USM LIFU",
+    date: "May 2024",
+    details: [
+      "The insights shared helped students gain clarity on their academic options, enabling them to make informed and confident choices for their future studies.",
+      "By aligning their interests with potential career paths, the workshop empowered students to pursue university programs best suited to their aspirations.",
+      "This initiative not only supported their academic planning but also played a crucial role in shaping their future success.",
+      "It fostered a deeper connection between students and their higher education goals.",
+    ],
+    route: "/speaker-education-sharing-workshop",
+  },
+  {
+    title:
+      "Participant at Pre-University Matriculation Innovation Competition 2023",
+    date: "February 2023",
+    details: [
+      "Participating in the Pre-University Matriculation Innovation Competition 2023 (PIITRAM 2023) was a significant achievement for me and my team.",
+      "Winning the Silver Award and receiving certification from MYIPO with Notification No.: LY2023W00296 underscores the quality and innovation of our product.",
+      "This recognition highlights our successful representation of the college and the competitive spirit fostered by PIITRAM, hosted by UPM.",
+      "The accolade from MYIPO further validates our idea's merit and intellectual property potential.",
+    ],
+    route: "/piitram2023",
+  },
+];
+
 export const CERTIFICATE_ICONS = [
     {
       img: "/assets/profile/data-cert.png",
@@ -1046,5 +1135,93 @@ export const GOOGLE_CLOUD_CERT = [
       { skill: "Prometheus" },
       { skill: "Kubernetes" },
     ],
+  }
+];
+
+export const PROJECTS= [
+  {
+    id: 1,
+    title: "Thrift And Thrive",
+    images: ["./assets/project/t-t/1.png"],
+    description: "This project focuses on developing an e-commerce website dedicated to the buying and selling of preloved clothing items. The platform aims to contribute to sustainable fashion by encouraging the reuse and recycling of apparel and accessories. Inspired by major e-commerce platforms like Shopee, Lazada and Carousell, the website is designed to offer a user-friendly shopping experience while promoting environmentally conscious consumer behavior. The initiative aligns with Sustainable Development Goal (SDG) 12, particularly Target 12.5, which focuses on substantially reducing waste generation through prevention, reduction, recycling and reuse.",
+    techStack: ["ReactJS", "Java", "CSS"],
+    githubLink: "https://github.com/kahyee0423/Thrift-and-Thrive-frontend.git",
+    Contributor: "Hor Kah Yee, Tan Tse Han, Padma Pireeyaa, Tan Mei Wei"
+  },
+  {
+    id: 2,
+    title: "Use a Pre-trained Image Classifier to Identify Dog Breeds",
+    images: ["./assets/project/pre-trained-identify-dog-breeds/1.png"],
+    description: "This project involved analyzing the performance of three pre-trained Convolutional Neural Network (CNN) architectures - ResNet, AlexNet, and VGG for an image classification task simulating a city dog show registration system. Utilizing Python, I processed image data, compared predicted labels against actual labels, and calculated performance metrics to determine the best architecture for classifying images as either 'dog' or 'not dog' and accurately identifying dog breeds. While AlexNet achieved the same level of accuracy for dog and non-dog images, the number of breeds classified correctly was only 80%, compared to the VGG and ResNet 93.33% and 90% respectively. The analysis revealed that VGG achieved the highest overall performance, correctly identifying all dog and non-dog images and also achieving the highest breed classification accuracy, offering a practical understanding of CNN architecture performance and Python's role in image data analysis.",
+    techStack: ["Python", "Jupyter Notebook", "Shell"],
+    githubLink: "https://github.com/kahyee0423/Use-a-Pre-trained-Image-Classifier-to-Identify-Dog-Breeds.git",
+    Contributor: "Hor Kah Yee"
+  },
+  {
+    id: 3,
+    title: "Image Classifier",
+    images: ["./assets/project/image-classifier/1.png"],
+    description: "This project is a flower image classifier built using PyTorch, fine-tuning a pre-trained VGG16 convolutional neural network (CNN) to recognize different flower species. The project encompasses the complete machine learning pipeline: data loading and transformation, model definition, training, validation, and testing, and includes the functionality to load saved model checkpoints. A key feature is a sanity check, displaying the original image alongside a bar chart of the top predicted flower species with their probabilities, promoting interpretability. Through this project, I gained practical experience with PyTorch for model building, training, and optimization, including harnessing CUDA for accelerated computation. I mastered image preprocessing techniques using Torchvision and PIL, and proficiently handled data with NumPy. Furthermore, I gained hands-on experience with transfer learning using pre-trained models, model persistence through saving and loading, and data visualization using Matplotlib. The project solidified my understanding of the entire machine learning pipeline, from data preparation to model deployment, and strengthened my grasp of fundamental deep learning concepts.",
+    techStack: ["Python", "Jupyter Notebook", "Pytorch", "CNN"],
+    githubLink: "https://github.com/kahyee0423/Image-Classifier.git",
+    Contributor: "Hor Kah Yee"
+  },
+];
+
+export const CERTIFICATIONS = [
+  {
+    id: 1,
+    category: "MongoDB",
+    title: "MongoDB Certified Developer",
+    link: "/MongoDB",
+    color: "from-green-400 to-blue-500",
+  },
+  {
+    id: 2,
+    category: "Oracle Cloud",
+    title: "Oracle Cloud Infrastructure Certified",
+    link: "/OracleCloud",
+    color: "from-red-400 to-purple-500",
+  },
+  {
+    id: 3,
+    category: "Google Cloud",
+    title: "Google Cloud Certified Professional",
+    link: "/GCCert",
+    color: "from-yellow-400 to-orange-500",
+  },
+  {
+    id: 4,
+    category: "Alibaba Cloud",
+    title: "Alibaba Cloud Certified Expert",
+    link: "/AlibabaCloud",
+    color: "from-blue-400 to-indigo-500",
+  },
+];
+
+export const ORACLE_CLOUD = [
+  {
+    id: 1,
+    name: "Oracle Cloud Infrastructure 2024 Certified AI Foundations Associate",
+    image: "./assets/profile/Oracle_Cloud_AI.jpg",
+    obtainedDate: "04 Dec 2024"
+  },
+  {
+    id: 2,
+    name: "Oracle Cloud Infrastructure 2024 Data Certified Foundations Associate",
+    image: "./assets/profile/Oracle_Cloud_Data.jpg",
+    obtainedDate: "07 Dec 2024"
+  },
+  {
+    id: 3,
+    name: "Oracle Fusion Cloud Applications ERP Certified Foundations Associate",
+    image: "./assets/profile/erp-cert.jpg",
+    obtainedDate: "18 Mar 2025"
+  },
+  {
+    id: 4,
+    name: "Oracle Cloud Infrastructure 2024 Certified Foundations Associate",
+    image: "./assets/profile/foundations-cert.jpg",
+    obtainedDate: "07 Dec 2024"
   },
 ];

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { ALIBABA_CERT, ALIBABA_SPECIALTY_CERT } from "../data";
+import { ALIBABA_CERT, ALIBABA_SPECIALTY_CERT } from "../utils/data";
 import AuroraGradientAnimated from "../AuroraGradientAnimated/page";
 import { motion } from "framer-motion";
 

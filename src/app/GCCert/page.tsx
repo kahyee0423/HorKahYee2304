@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { GOOGLE_CLOUD_CERT } from "../data";
+import { GOOGLE_CLOUD_CERT } from "../utils/data";
 
 interface Skill {
   skill: string;
