@@ -18,7 +18,7 @@ export const EXPERIENCE = [
       "A major highlight was the hands-on workshops, where participants built real-world applications, such as AI-powered chatbots, e-commerce prototypes, and interactive dashboards, demonstrating the practical capabilities of Google technologies.",
       "The speaker sessions provided a structured learning path, with beginner-friendly introductions to core concepts and intermediate sessions focusing on integrated solutions across multiple technologies.",
     ],
-    route: "/core-team-gdsc",
+    route: "/CoreTeamGDSC",
   },
   {
     title: "Project Director at Web Weavers: Crafting the Digital Web",
@@ -27,7 +27,7 @@ export const EXPERIENCE = [
       "The session provided a comprehensive introduction to front-end, back-end, and full-stack development and ensures that key concepts were presented in an accessible and engaging manner.",
       "A major highlight of the talk in my session was the deep dive into front-end frameworks, with a special emphasis on Angular, showcasing both of its capabilities and real-world applications",
     ],
-    route: "/core-team-gdsc",
+    route: "/CoreTeamGDSC",
   },
   {
     title:
@@ -37,7 +37,7 @@ export const EXPERIENCE = [
       "Worked on various Google technology related events, including Figma, Version Control System and GitHub",
       "Actively Participated in every event planning for the club",
     ],
-    route: "/core-team-gdsc",
+    route: "/CoreTeamGDSC",
   },
   {
     title: "Emceeing a Figma workshop hosted by GDSC USM",
@@ -48,7 +48,7 @@ export const EXPERIENCE = [
       "Participants were fully engaged during a hands-on Figma session, offering them a practical and enjoyable experience. ",
       "The workshop concluded with resounding success, making all the efforts truly worthwhile.",
     ],
-    route: "/core-team-gdsc",
+    route: "/CoreTeamGDSC",
   },
   {
     title:
@@ -60,7 +60,7 @@ export const EXPERIENCE = [
       "Sponsored by major industry leaders, it promises valuable experience and exposure to top Web3 technologies.",
       "This hackathon underscores a commitment to fostering innovation and expertise in the Web3 space among the next generation of developers.",
     ],
-    route: "/core-team-gdsc",
+    route: "/CoreTeamGDSC",
   },
   {
     title: "Speaker at Education Sharing Workshop hosted by USM LIFU",
@@ -83,7 +83,7 @@ export const EXPERIENCE = [
       "This recognition highlights our successful representation of the college and the competitive spirit fostered by PIITRAM, hosted by UPM.",
       "The accolade from MYIPO further validates our idea's merit and intellectual property potential.",
     ],
-    route: "/piitram2023",
+    route: "/Piitram",
   },
 ];
 
@@ -1257,20 +1257,20 @@ export const TEAM_DATA = {
       "Achieving Core Team Member certification at EPCD GDSC USM 23/24 underscores my dedication and teamwork.",
   },
   leadingTheWay: {
-    title: "Leading the Way: 24/25 Academic Session",
+    title: "Pioneering Excellence: Leading the Academic Session 24/25",
     sections: [
       {
         type: "hod",
         image: "/assets/CoreTeamGDSCPic/hod.png",
         title: "Head of Department: Event Planning and Culture Development 24/25",
         description:
-          "Meet the inspiring speakers who will share their knowledge and experiences to empower the next generation of innovators.",
+          "Leading the strategic planning and execution of events while fostering a vibrant and inclusive tech culture within the community",
       },
       {
         type: "hackathon",
         title: "Organizing Committee: MY Universities Hackathon",
         description:
-          "Meet the inspiring speakers who will share their knowledge and experiences to empower the next generation of innovators.",
+          "Collaborating with universities to organize a high-impact hackathon that brings together innovators, developers and problem-solvers to create groundbreaking solutions",
         carouselImages: [
           "/assets/CoreTeamGDSCPic/hack-1.jpg",
           "/assets/CoreTeamGDSCPic/hack-2.jpg",
@@ -1285,7 +1285,7 @@ export const TEAM_DATA = {
         type: "speakers",
         title: "Speaker at Web Weavers: Focus on Angular",
         description:
-          "Meet the inspiring speakers who will share their knowledge and experiences to empower the next generation of innovators.",
+          "Sharing insights on Angular development, best practices and real-world applications to empower aspiring web developers",
         carouselImages: [
           "/assets/CoreTeamGDSCPic/sp-1.png",
           "/assets/CoreTeamGDSCPic/sp-2.png",
@@ -1296,7 +1296,7 @@ export const TEAM_DATA = {
           "/assets/CoreTeamGDSCPic/sp-7.jpg",
         ],
       },
-      {
+      /*{
         type: "project-director",
         title: "Project Director at TechFest USM",
         description:
@@ -1310,7 +1310,56 @@ export const TEAM_DATA = {
           "/assets/CoreTeamGDSCPic/sp-6.jpg",
           "/assets/CoreTeamGDSCPic/sp-7.jpg",
         ],
-      },
+      },*/
     ],
   },
+};
+
+export const piitramData = {
+  images: [
+    '/assets/piitramPic/img-01.jpg',
+    '/assets/piitramPic/group.jpg',
+    '/assets/piitramPic/img-09.jpg',
+    '/assets/piitramPic/img-04.jpg',
+    '/assets/piitramPic/img-05.jpg',
+    '/assets/piitramPic/img-02.jpg',
+    '/assets/piitramPic/img-06.jpg',
+    '/assets/piitramPic/img-08.jpg',
+    '/assets/piitramPic/img-15.jpg',
+    '/assets/piitramPic/img-17.jpg',
+    '/assets/piitramPic/upm_cert.jpg',
+    '/assets/piitramPic/award-badge.jpg',
+    '/assets/piitramPic/kmpk-cert.jpg',
+  ],
+  honors: [
+    '/assets/piitramPic/myipo-cert.jpg',
+    '/assets/piitramPic/upm_cert.jpg',
+    '/assets/piitramPic/kmpk-cert.jpg',
+    '/assets/piitramPic/medal.png',
+  ],
+  gains: [
+    'Skills Development',
+    'Networking Opportunities',
+    'Personal Growth',
+    'Recognition and Achievements',
+    'Learning Experience',
+    'Motivation and Inspiration',
+    'Teamwork Experience',
+    'Creativity',
+    'Exposure to Best Practices',
+  ],
+  achievements: [
+    {
+      icon: '/assets/piitramPic/icon.png',
+      text: 'Silver Medal',
+    },
+    {
+      icon: '/assets/piitramPic/star.png',
+      text: 'Certified by MYIPO with the Certification No: CRLY2023W00396',
+    },
+    {
+      icon: '/assets/piitramPic/ppl.png',
+      text: 'Innovation Award',
+    },
+  ],
 };

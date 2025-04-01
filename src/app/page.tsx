@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Caveat, Boogaloo } from 'next/font/google';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SplashScreen from "./SplashScreen/page";
@@ -11,6 +12,9 @@ import ContactDrawer from "./ContactDrawer/page";
 import Experience from "./Experience/page";
 import Projects from "./Projects/page";
 import Certification from "./Certification/page";
+
+const caveat = Caveat({ subsets: ['latin'], variable: '--font-caveat' });
+const boogaloo = Boogaloo({ subsets: ['latin'], weight: '400', variable: '--font-boogaloo' });
 
 const fadeInVariants = {
   hidden: { opacity: 0 },

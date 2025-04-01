@@ -133,16 +133,16 @@ const CoreTeamGDSC = () => {
       </div>
 
       {/* Leading the Way Section */}
-      <div className="w-full max-w-6xl mt-20 px-6">
-        <h2 className="text-6xl font-boogaloo text-white text-center mb-12 drop-shadow-lg">
+      <div className="w-full max-w-7xl mt-20 px-6">
+        <h2 className="text-5xl font-boogaloo text-white text-center mb-12 drop-shadow-lg">
           {TEAM_DATA.leadingTheWay.title}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {TEAM_DATA.leadingTheWay.sections.map((section, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 shadow-lg transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl"
+              className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-10 shadow-lg transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl"
             >
               {section.type === "hod" && (
                 <>
@@ -150,7 +150,7 @@ const CoreTeamGDSC = () => {
                     <img
                       src={section.image}
                       alt="HOD"
-                      className="w-full rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
+                      className="w-70 ml-4 rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
                     />
                   </div>
                   <div className="text-white mt-5 text-center">
@@ -160,7 +160,7 @@ const CoreTeamGDSC = () => {
                 </>
               )}
 
-              {["hackathon", "speakers", "project-director"].includes(section.type) && (
+              {["hackathon", "speakers", {/*"project-director"*/}].includes(section.type) && (
                 <>
                   <div className="text-white text-center mb-6">
                     <h3 className="text-2xl font-bold">"{section.title}"</h3>
