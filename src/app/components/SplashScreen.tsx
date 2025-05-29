@@ -20,6 +20,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
     }, 1000);
 
     const completionTimer = setTimeout(() => {
+      console.log("Splash done — calling onComplete");
       setIsVisible(false);
       onComplete();
     }, 3000);
@@ -73,7 +74,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
           transition={{ duration: 1 }}
         >
           <Image
-            src="./assets/general/splash-pic-name.png"
+            src="/assets/general/splash-pic-name.png" // ✅ Fixed image path
             alt="Portfolio showcase"
             fill
             className="object-contain"
@@ -84,4 +85,4 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
   );
 };
 
-export default SplashScreen; 
+export default SplashScreen;
