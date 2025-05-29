@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 
 const COLORS = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
-export const AuroraGradientAnimated = () => {
+export default function AuroraGradientAnimated() {
   const color = useMotionValue(COLORS[0]);
 
   useEffect(() => {
@@ -26,6 +26,4 @@ export const AuroraGradientAnimated = () => {
     >
     </motion.section>
   );
-};
-
-export default AuroraGradientAnimated;
+}

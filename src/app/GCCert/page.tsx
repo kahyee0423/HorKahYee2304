@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { GOOGLE_CLOUD_CERT } from "../utils/data";
+import Image from "next/image";
 
 interface Skill {
   skill: string;
@@ -100,11 +101,14 @@ const GCCert = () => {
             >
               <a href={cert.verify} target="_blank" rel="noopener noreferrer">
                 <div className="relative overflow-hidden">
-                  <img
-                    src={cert.img}
-                    alt={cert.name}
-                    className="w-125 h-83 rounded-xl"
-                  />
+                  <div className="relative w-[500px] h-[333px]">
+                    <Image
+                      src={cert.img}
+                      alt={cert.name}
+                      fill
+                      className="rounded-xl object-contain"
+                    />
+                  </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-black/80 text-white p-4 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0">
                     <h4 className="font-bold text-left">Skills:</h4>
                     <ul className="pl-2">

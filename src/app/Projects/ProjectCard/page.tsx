@@ -4,6 +4,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Image from "next/image";
 
 interface Project {
   id: number;
@@ -44,11 +45,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick 
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <img
-                src={image}
-                alt={`${project.title} - ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
+              <div className="relative w-full h-full">
+                <Image
+                  src={image}
+                  alt={`${project.title} - ${index + 1}`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

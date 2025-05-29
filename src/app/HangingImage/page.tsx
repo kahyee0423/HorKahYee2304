@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 interface HangingImageProps {
   src: string;
@@ -21,11 +22,14 @@ const HangingImage: React.FC<HangingImageProps> = ({ src, alt, className }) => {
       <div className="absolute h-[4px] bg-white right-1/4 top-[-25px] w-[240px] rotate-12 -z-10 -mr-[200px] md:w-[220px] md:left-[11rem] lg:w-[225px] lg:left-[14rem] lg:top-[-8%] lg:mt-[2.3rem] xl:w-[210px] xl:top-[8%] xl:right-[70%] xl:-ml-[10rem] sm:hidden" />
 
       {/* Image */}
-      <img
-        src={src}
-        alt={alt}
-        className={`block border-2 border-gray-300 rounded-lg ${className}`} // Use className prop
-      />
+      <div className="relative w-full aspect-square">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          className={`block border-2 border-gray-300 rounded-lg object-contain ${className}`}
+        />
+      </div>
     </div>
   );
 };
