@@ -17,12 +17,14 @@ export default function Navbar() {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link href="/" className="text-white text-2xl font-bold">
-              <div className="relative w-[280px] h-[50px]">
+              <div className="relative w-[350px] h-[70px] md:w-[400px] md:h-[80px] lg:w-[450px] lg:h-[90px]">
                 <Image
                   src="./assets/general/Name2.png" 
                   alt="Logo"
                   fill
                   className="object-contain"
+                  priority
+                  sizes="(max-width: 768px) 350px, (max-width: 1024px) 400px, 450px"
                 />
               </div>
             </Link>
