@@ -2,9 +2,16 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import Slider from "react-slick";
-import ExperienceCard from "../Experience/ExperienceCard/page";
+import ExperienceCard from "../components/ExperienceCard";
 import { EXPERIENCE } from "../utils/data";
 import Link from "next/link";
+
+interface ExperienceItem {
+  title: string;
+  date: string;
+  details: string[];
+  route: string;
+}
 
 const Experience = () => {
   const sliderRef = useRef<InstanceType<typeof Slider> | null>(null); 
@@ -97,7 +104,7 @@ const Experience = () => {
         </div>
 
         <Slider ref={sliderRef} {...settings}>
-          {EXPERIENCE.map((item) => (
+          {EXPERIENCE.map((item: ExperienceItem) => (
             <Link href={item.route} key={item.title} className="block">
               <ExperienceCard details={item} />
             </Link>

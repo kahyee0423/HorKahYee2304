@@ -5,8 +5,9 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sparkles } from "@react-three/drei";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
-const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
+const SplashScreenComponent: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
   const [showImage, setShowImage] = useState(false);
 
   useEffect(() => {
@@ -78,4 +79,12 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
   );
 };
 
-export default SplashScreen;
+export default function SplashScreen() {
+  const router = useRouter();
+
+  const handleComplete = () => {
+    router.push("/");
+  };
+
+  return <SplashScreenComponent onComplete={handleComplete} />;
+}

@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -23,7 +25,7 @@ interface ProjectCardProps {
   onClick: () => void;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick }) => {
+const ProjectCardComponent: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick }) => {
   const images = Array.isArray(project.images) ? project.images : [project.images || ""];
 
   return (
@@ -93,4 +95,29 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick 
   );
 };
 
-export default ProjectCard;
+export default function ProjectCard() {
+  const [expandedProject, setExpandedProject] = useState<number | null>(null);
+
+  const sampleProject: Project = {
+    id: 1,
+    title: "Sample Project",
+    images: ["/sample-project.jpg"],
+    description: "This is a sample project description.",
+    techStack: ["React", "Next.js", "TypeScript"],
+    githubLink: "https://github.com/username/project",
+    Contributor: "John Doe"
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-100 p-8">
+      <h1 className="text-4xl font-bold text-gray-900 mb-8">Project Details</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ProjectCardComponent
+          project={sampleProject}
+          isExpanded={expandedProject === sampleProject.id}
+          onClick={() => setExpandedProject(expandedProject === sampleProject.id ? null : sampleProject.id)}
+        />
+      </div>
+    </div>
+  );
+}

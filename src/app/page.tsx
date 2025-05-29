@@ -30,14 +30,14 @@ const sectionVariants = {
   },
 };
 
-const Home = () => {
+export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   return (
     <>
       {showSplash ? (
-        <SplashScreen onComplete={() => setShowSplash(false)} />
+        <SplashScreen />
       ) : (
         <div className={`min-h-screen flex flex-col w-full bg-gradient-to-br from-gray-800 to-purple-900 overflow-y-auto ${caveat.variable} ${boogaloo.variable}`}>
           <Navbar />
@@ -88,6 +88,4 @@ const Home = () => {
       )}
     </>
   );
-};
-
-export default Home;
+}
