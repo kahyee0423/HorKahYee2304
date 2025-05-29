@@ -74,7 +74,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
           transition={{ duration: 1 }}
         >
           <Image
-            src="/assets/general/splash-pic-name.png" // ✅ Fixed image path
+            src="./assets/general/splash-pic-name.png" 
             alt="Portfolio showcase"
             fill
             className="object-contain"
