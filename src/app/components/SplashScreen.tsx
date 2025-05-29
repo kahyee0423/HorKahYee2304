@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export interface SplashScreenProps {
@@ -8,12 +8,17 @@ export interface SplashScreenProps {
 }
 
 const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
+  const [isVisible, setIsVisible] = useState(true);
+
   useEffect(() => {
     const timer = setTimeout(() => {
+      setIsVisible(false);
       onComplete();
     }, 3000); // Adjust the time as needed
     return () => clearTimeout(timer);
   }, [onComplete]);
+
+  if (!isVisible) return null;
 
   return (
     <motion.div
