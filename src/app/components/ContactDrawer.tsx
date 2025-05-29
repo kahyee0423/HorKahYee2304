@@ -36,7 +36,7 @@ export default function ContactDrawer({ isOpen, setIsOpen }: Props) {
           <span>Email</span>
         </a>
         <a
-          href="https://github.com/horkahyee"
+          href="https://github.com/kahyee0423"
           className="flex items-center space-x-3 text-gray-700 hover:text-black"
           target="_blank"
           rel="noopener noreferrer"
@@ -45,7 +45,7 @@ export default function ContactDrawer({ isOpen, setIsOpen }: Props) {
           <span>GitHub</span>
         </a>
         <a
-          href="https://www.linkedin.com/in/hor-kah-yee/"
+          href="https://www.linkedin.com/in/kahyee0423/"
           className="flex items-center space-x-3 text-gray-700 hover:text-blue-700"
           target="_blank"
           rel="noopener noreferrer"
@@ -54,7 +54,7 @@ export default function ContactDrawer({ isOpen, setIsOpen }: Props) {
           <span>LinkedIn</span>
         </a>
         <a
-          href="https://www.instagram.com/hor.kahyee/"
+          href="https://www.instagram.com/kahyxx2304/"
           className="flex items-center space-x-3 text-gray-700 hover:text-red-700"
           target="_blank"
           rel="noopener noreferrer"
