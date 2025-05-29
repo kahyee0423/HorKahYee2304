@@ -56,13 +56,14 @@ const Experience = () => {
       { threshold: 0.1 }
     );
 
-    if (experienceRef.current) {
-      observer.observe(experienceRef.current);
+    const currentRef = experienceRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (experienceRef.current) {
-        observer.unobserve(experienceRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

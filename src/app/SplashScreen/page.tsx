@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sparkles } from "@react-three/drei";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
   const [showImage, setShowImage] = useState(false);
@@ -51,7 +52,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
         transition={{ opacity: { duration: 1 }, y: { duration: 1 } }}
       >
         <h1 className="text-4xl font-bold">
-          Immerse yourself in Kah Yee's portfolio
+          Immerse yourself in Kah Yee&apos;s portfolio
         </h1>
         <p className="mt-4 text-lg">
           A showcase of sophisticated achievements and visionary craftsmanship
@@ -59,14 +60,19 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
       </motion.div>
 
       {showImage && (
-        <motion.img
-          src="./assets/general/splash-pic-name.png"
-          alt="Portfolio showcase"
-          className="absolute top-20 left-1/2 transform -translate-x-1/2 w-100 h-auto"
+        <motion.div
+          className="absolute top-20 left-1/2 transform -translate-x-1/2 w-100 h-100"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-        />
+        >
+          <Image
+            src="./assets/general/splash-pic-name.png"
+            alt="Portfolio showcase"
+            fill
+            className="object-contain"
+          />
+        </motion.div>
       )}
     </div>
   );

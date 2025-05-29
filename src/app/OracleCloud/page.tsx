@@ -1,4 +1,5 @@
 import { ORACLE_CLOUD } from "../utils/data";
+import Image from "next/image";
 
 export default function OracleCloud() {
   return (
@@ -14,11 +15,14 @@ export default function OracleCloud() {
               key={cert.id}
               className="bg-white rounded-lg shadow-lg"
             >
-              <img
-                src={cert.image}
-                alt={cert.name}
-                className="w-full object-cover"
-              />
+              <div className="relative w-full h-48">
+                <Image
+                  src={cert.image}
+                  alt={cert.name}
+                  fill
+                  className="object-cover rounded-t-lg"
+                />
+              </div>
               <div className="p-6">
                 <h2 className="text-xl font-semibold mb-2">{cert.name}</h2>
                 <p className="text-gray-600">ID: {cert.id}</p>

@@ -3,14 +3,16 @@
 import React, { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Slider from 'react-slick';
+import type { Settings } from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { piitramData } from '../utils/data';
 import { PiitramData } from '../utils/types';
+import Image from 'next/image';
 
 const Piitram: React.FC = () => {
   const router = useRouter();
-  const sliderRef = useRef<Slider | null>(null);
+  const sliderRef = useRef<any>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -58,57 +60,55 @@ const Piitram: React.FC = () => {
         </div>
 
         <div className="relative mt-8" style={{ height: '500px' }}>
-        <div
-          className="absolute top-1/2 left-[-3rem] transform -translate-y-1/2 w-10 h-10 flex items-center justify-center text-purple-600 bg-[#130f2a] border border-purple-600 rounded-lg cursor-pointer z-50"
-          onClick={slideLeft}
-        >
-          &lt;
-        </div>
+          <div
+            className="absolute top-1/2 left-[-3rem] transform -translate-y-1/2 w-10 h-10 flex items-center justify-center text-purple-600 bg-[#130f2a] border border-purple-600 rounded-lg cursor-pointer z-50"
+            onClick={slideLeft}
+          >
+            &lt;
+          </div>
 
-        <div className="w-full mt-15 flex justify-center">
-          <div className="w-[400px]">
-            <Slider key={images.length} ref={sliderRef} {...settings}>
-              {images.map((image, index) => (
-                <div key={index} className="flex justify-center">
-                  <div className="w-96 h-96 overflow-hidden rounded-lg border-2 border-purple-700 flex justify-center items-center">
-                    <img
-                      src={image}
-                      alt={`Slide ${index}`}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        console.error("Failed to load image:", image);
-                        e.currentTarget.src = "/path/to/fallback-image.jpg";
-                      }}
-                    />
+          <div className="w-full mt-15 flex justify-center">
+            <div className="w-[400px]">
+              <Slider key={images.length} ref={sliderRef} {...settings}>
+                {images.map((image, index) => (
+                  <div key={index} className="flex justify-center">
+                    <div className="relative w-96 h-96 overflow-hidden rounded-lg border-2 border-purple-700 flex justify-center items-center">
+                      <Image
+                        src={image}
+                        alt={`Slide ${index}`}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
-            </Slider>
+                ))}
+              </Slider>
+            </div>
+          </div>
+
+          <div
+            className="absolute top-1/2 right-[-3rem] transform -translate-y-1/2 w-10 h-10 flex items-center justify-center text-purple-600 bg-[#130f2a] border border-purple-600 rounded-lg cursor-pointer z-50"
+            onClick={slideRight}
+          >
+            &gt;
           </div>
         </div>
-
-        <div
-          className="absolute top-1/2 right-[-3rem] transform -translate-y-1/2 w-10 h-10 flex items-center justify-center text-purple-600 bg-[#130f2a] border border-purple-600 rounded-lg cursor-pointer z-50"
-          onClick={slideRight}
-        >
-          &gt;
-        </div>
-      </div>
 
         <div className="flex justify-between mt-20 w-full">
           <div className="grid grid-cols-2 gap-4 w-1/2">
             {honors.map((honor, index) => (
-              <img
-                key={index}
-                src={honor}
-                alt={`Honor ${index}`}
-                className="w-full p-4 border-2 border-purple-700 rounded-lg"
-                onError={(e) => console.error('Failed to load image:', honor)}
-              />
+              <div key={index} className="relative w-full aspect-square p-4 border-2 border-purple-700 rounded-lg">
+                <Image
+                  src={honor}
+                  alt={`Honor ${index}`}
+                  fill
+                  className="object-contain"
+                />
+              </div>
             ))}
           </div>
 
-         <div className="w-1/2 ml-8">
+          <div className="w-1/2 ml-8">
             <h2 className="text-4xl font-caveat font-bold border-2 border-purple-700 text-center w-3/4 mx-auto">
               Premier Intellectual and Professional Gains from My Engagement
             </h2>
@@ -122,7 +122,14 @@ const Piitram: React.FC = () => {
               <h4 className="text-xl text-white mb-4">HONOURS AND ACHIEVEMENT</h4>
               {achievements.map((achievement, index) => (
                 <p key={index} className="text-lg text-white flex items-center mt-4">
-                  <img src={achievement.icon} alt="" className="mr-2 w-5 h-5" />
+                  <div className="relative w-5 h-5 mr-2">
+                    <Image
+                      src={achievement.icon}
+                      alt=""
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                   {achievement.text}
                 </p>
               ))}

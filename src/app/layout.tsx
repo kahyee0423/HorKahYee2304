@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="fixed top-0 left-0 w-screen h-screen flex bg-gradient-to-br from-blue-500 to-purple-600">
         {children}
       </body>

@@ -5,6 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { SENTENCE_DATA } from "../utils/data";
+import Image from "next/image";
 
 interface HeroSectionProps {
   isDrawerOpen: boolean;
@@ -78,24 +79,29 @@ export default function HeroSection({ setIsDrawerOpen }: HeroSectionProps) {
           className="flex-1 flex items-center justify-center relative z-10 top-7 cursor-pointer"
           onClick={() => setIsPaperVisible(true)}
         >
-          <img
-            src="./assets/general/cover-pic.png"
-            alt="Kah Yee"
-            className="w-96 h-auto rounded-full border-4 border-white shadow-2xl hover:scale-105 transition-transform duration-300"
-          />
+          <div className="relative w-96 h-96">
+            <Image
+              src="./assets/general/cover-pic.png"
+              alt="Kah Yee"
+              fill
+              className="rounded-full border-4 border-white shadow-2xl hover:scale-105 transition-transform duration-300 object-cover"
+            />
+          </div>
         </motion.div>
       </div>
 
       {isPaperVisible && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="w-[900px] max-h-[80vh] bg-white border border-gray-300 rounded-lg shadow-lg p-6 overflow-y-auto flex">
-
             <div className="w-[30%] flex flex-col items-center justify-center pr-6 sticky top-0">
-              <img
-                src="./assets/general/HorKahYee.jpg"
-                alt="Kah Yee"
-                className="w-full h-auto rounded-lg shadow-md"
-              />
+              <div className="relative w-full aspect-square">
+                <Image
+                  src="./assets/general/HorKahYee.jpg"
+                  alt="Kah Yee"
+                  fill
+                  className="rounded-lg shadow-md object-cover"
+                />
+              </div>
               <button
                 onClick={() => router.push("/Profile")}
                 className="mt-4 px-4 py-2 text-sm font-semibold bg-[#7e61e7] text-white font-bold rounded-lg outline outline-1.5 outline-transparent transition-all duration-300 ease-in-out hover:bg-black hover:from-transparent hover:to-transparent hover:text-[#a993fe] hover:outline-[#a993fe] hover:scale-105 cursor-pointer"
@@ -106,7 +112,7 @@ export default function HeroSection({ setIsDrawerOpen }: HeroSectionProps) {
 
             <div className="w-[70%] space-y-4 text-gray-700">
               <h2 className="font-caveat-brush text-2xl mb-4">Here is a Letter for You:</h2>
-              <h3 className="text-lg font-bold mb-4">"A Glimpse into My Journey"</h3>
+              <h3 className="text-lg font-bold mb-4">&ldquo;A Glimpse into My Journey&rdquo;</h3>
               <p>
               She is an accomplished technology enthusiast and certified cloud professional with expertise in cloud computing, artificial intelligence, and data analytics. Holding multiple prestigious credentials, including Google Cloud Data Analytics, Computing Foundations, Cybersecurity Certifications, and Alibaba Cloud Certified Associate, she is also an AWS AI & ML Scholar, continuously expanding her technical expertise through programs like Google Cloud Skill Boost and Alibaba Cloud Academy.
             </p>

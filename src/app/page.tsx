@@ -39,7 +39,7 @@ const Home = () => {
       {showSplash ? (
         <SplashScreen onComplete={() => setShowSplash(false)} />
       ) : (
-        <div className="min-h-screen flex flex-col w-full bg-gradient-to-br from-gray-800 to-purple-900 overflow-y-auto">
+        <div className={`min-h-screen flex flex-col w-full bg-gradient-to-br from-gray-800 to-purple-900 overflow-y-auto ${caveat.variable} ${boogaloo.variable}`}>
           <Navbar />
           <main className="flex-grow min-h-[calc(100vh-100px)]">
             <motion.section
