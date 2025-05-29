@@ -1,16 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { SENTENCE_DATA } from "../utils/data";
 import Image from "next/image";
 
-const HeroSectionComponent: React.FC<{
+export interface HeroSectionProps {
   isDrawerOpen: boolean;
   setIsDrawerOpen: (isOpen: boolean) => void;
-}> = ({ setIsDrawerOpen }) => {
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ setIsDrawerOpen }) => {
   const [isPaperVisible, setIsPaperVisible] = useState(false);
   const router = useRouter();
 
@@ -167,8 +169,4 @@ const HeroSectionComponent: React.FC<{
   );
 };
 
-export default function Hero() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
-  return <HeroSectionComponent isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />;
-}
+export default HeroSection; 

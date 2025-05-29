@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { PROJECTS } from "../utils/data";
-import ProjectCard from "./ProjectCard/page";
+import ProjectCard from "../components/ProjectCard";
 import { AnimatePresence, motion } from "framer-motion";
 
 const ProjectSection = () => {
