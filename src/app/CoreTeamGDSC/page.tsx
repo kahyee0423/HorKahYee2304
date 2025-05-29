@@ -9,35 +9,6 @@ import "swiper/css/pagination";
 import { TEAM_DATA } from "../utils/data";
 import Image from "next/image";
 
-/*type TeamData = {
-  introduction: {
-    image: string;
-    title: string;
-    description: string;
-    footer: string;
-  };
-  onboardingSession: {
-    images: string[];
-    title: string;
-    description: string;
-  };
-  workshopEmcee: {
-    title: string;
-    description: string;
-    subTitle: string;
-    image: string;
-  };
-  certification: {
-    image: string;
-    title: string;
-    description: string;
-  };
-  leadingTheWay: {
-    title: string;
-    sections: Section[];
-  };
-};*/
-
 const CoreTeamGDSC = () => {
   const router = useRouter();
 

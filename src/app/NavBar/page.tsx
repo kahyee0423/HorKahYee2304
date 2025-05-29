@@ -19,7 +19,7 @@ export default function Navbar() {
             <Link href="/" className="text-white text-2xl font-bold">
               <div className="relative w-[280px] h-[50px]">
                 <Image
-                  src="/assets/general/Name2.png" 
+                  src="./assets/general/Name2.png" 
                   alt="Logo"
                   fill
                   className="object-contain"

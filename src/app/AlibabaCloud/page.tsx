@@ -85,7 +85,7 @@ const AlibabaCloud = () => {
         <div className="relative flex-1 flex justify-center items-center">
           <div className="relative w-full aspect-square">
             <Image
-              src="/assets/AlibabaCloudPic/ACA.png"
+              src="./assets/AlibabaCloudPic/ACA.png"
               alt="ACA pic"
               fill
               className="rounded-lg shadow-lg object-contain"

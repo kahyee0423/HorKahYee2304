@@ -40,7 +40,7 @@ export default function HangingImage() {
       <h1 className="text-4xl font-bold text-white mb-8 text-center">Hanging Images</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <HangingImageComponent
-          src="/sample-image.jpg"
+          src="./sample-image.jpg"
           alt="Sample hanging image"
           className="hover:scale-105 transition-transform duration-300"
         />
