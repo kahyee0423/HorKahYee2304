@@ -33,7 +33,7 @@ const CoreTeamGDSC = () => {
             src={TEAM_DATA.introduction.image}
             alt="intro pic"
             fill
-            className="transition-transform duration-500 ease-in-out group-hover:translate-x-[-10%] object-cover"
+            className="transition-transform duration-500 ease-in-out group-hover:translate-x-[-10%]"
           />
         </div>
         <div className="text-center relative ml-10">
@@ -125,7 +125,7 @@ const CoreTeamGDSC = () => {
                       src={section.image}
                       alt="HOD"
                       fill
-                      className="ml-4 rounded-lg shadow-lg transition-transform duration-500 hover:scale-105 object-cover"
+                      className="ml-4 rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
                     />
                   </div>
                   <div className="text-white mt-5 text-center">
