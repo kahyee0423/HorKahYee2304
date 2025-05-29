@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Caveat, Boogaloo } from 'next/font/google';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SplashScreen from "./SplashScreen/page";
+import SplashScreen from "./components/SplashScreen";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./NavBar/page";
 import ContactDrawer from "./components/ContactDrawer";
@@ -31,13 +31,13 @@ const sectionVariants = {
 };
 
 export default function Home() {
-  const [showSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(true);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   return (
     <>
       {showSplash ? (
-        <SplashScreen />
+        <SplashScreen onComplete={() => setShowSplash(false)} />
       ) : (
         <div className={`min-h-screen flex flex-col w-full bg-gradient-to-br from-gray-800 to-purple-900 overflow-y-auto ${caveat.variable} ${boogaloo.variable}`}>
           <Navbar />
