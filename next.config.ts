@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   basePath: `/${repoName}`,
   assetPrefix: `/${repoName}/`,
   images: {
-    unoptimized: true, // Required for GitHub Pages (static export)
+    unoptimized: true, 
   },
 }
 
