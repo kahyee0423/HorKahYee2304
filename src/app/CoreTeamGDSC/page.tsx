@@ -16,7 +16,7 @@ type Section = {
   carouselImages?: string[]; 
 };
 
-type TeamData = {
+/*type TeamData = {
   introduction: {
     image: string;
     title: string;
@@ -43,8 +43,7 @@ type TeamData = {
     title: string;
     sections: Section[];
   };
-};
-
+};*/
 
 const CoreTeamGDSC = () => {
   const router = useRouter();
@@ -96,7 +95,7 @@ const CoreTeamGDSC = () => {
           ))}
         </div>
         <div className="text-left text-white max-w-[60%]">
-          <h3 className="text-2xl font-bold">"{TEAM_DATA.onboardingSession.title}"</h3>
+          <h3 className="text-2xl font-bold">{TEAM_DATA.onboardingSession.title}</h3>
           <p className="italic mt-4">{TEAM_DATA.onboardingSession.description}</p>
         </div>
       </div>
@@ -104,7 +103,7 @@ const CoreTeamGDSC = () => {
       {/* Workshop Emcee Section */}
       <div className="flex flex-row p-8 justify-start items-start mt-8 ml-24">
         <div className="text-left text-white max-w-[40%] mt-44">
-          <h3 className="text-2xl font-bold">"{TEAM_DATA.workshopEmcee.title}"</h3>
+          <h3 className="text-2xl font-bold">{TEAM_DATA.workshopEmcee.title}</h3>
           <p className="italic">{TEAM_DATA.workshopEmcee.description}</p>
           <h5 className="mt-4">{TEAM_DATA.workshopEmcee.subTitle}</h5>
         </div>
@@ -127,7 +126,7 @@ const CoreTeamGDSC = () => {
           />
         </div>
         <div className="text-left text-white mt-14 max-w-[70%]">
-          <h3 className="text-2xl font-bold">"{TEAM_DATA.certification.title}"</h3>
+          <h3 className="text-2xl font-bold">{TEAM_DATA.certification.title}</h3>
           <p className="italic mt-4">{TEAM_DATA.certification.description}</p>
         </div>
       </div>
@@ -154,7 +153,7 @@ const CoreTeamGDSC = () => {
                     />
                   </div>
                   <div className="text-white mt-5 text-center">
-                    <h3 className="text-2xl font-bold">"{section.title}"</h3>
+                    <h3 className="text-2xl font-bold">{section.title}</h3>
                     <p className="italic mt-3">{section.description}</p>
                   </div>
                 </>
@@ -163,7 +162,7 @@ const CoreTeamGDSC = () => {
               {["hackathon", "speakers", "project-director"].includes(section.type) && (
                 <>
                   <div className="text-white text-center mb-6">
-                    <h3 className="text-2xl font-bold">"{section.title}"</h3>
+                    <h3 className="text-2xl font-bold">{section.title}</h3>
                     <p className="italic mt-3">{section.description}</p>
                   </div>
                   <Swiper

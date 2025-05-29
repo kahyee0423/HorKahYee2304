@@ -1231,7 +1231,6 @@ export const ORACLE_CLOUD = [
   },
 ];
 
-// data.js
 export const TEAM_DATA = {
   introduction: {
     image: "/assets/CoreTeamGDSCPic/img-04.png",

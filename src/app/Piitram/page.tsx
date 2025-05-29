@@ -10,7 +10,7 @@ import { PiitramData } from '../utils/types';
 
 const Piitram: React.FC = () => {
   const router = useRouter();
-  const sliderRef = useRef<any>(null);
+  const sliderRef = useRef<Slider | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
