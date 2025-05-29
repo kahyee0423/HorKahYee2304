@@ -6,10 +6,10 @@ import Image from "next/image";
 interface HangingImageProps {
   src: string;
   alt: string;
-  className?: string; // Add className prop
+  className?: string;
 }
 
-const HangingImage: React.FC<HangingImageProps> = ({ src, alt, className }) => {
+const HangingImageComponent: React.FC<HangingImageProps> = ({ src, alt, className }) => {
   return (
     <div className="relative flex justify-center items-center mx-auto my-12 max-w-[150px] w-full">
       {/* Left String */}
@@ -34,4 +34,17 @@ const HangingImage: React.FC<HangingImageProps> = ({ src, alt, className }) => {
   );
 };
 
-export default HangingImage;
+export default function HangingImage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 p-8">
+      <h1 className="text-4xl font-bold text-white mb-8 text-center">Hanging Images</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <HangingImageComponent
+          src="/sample-image.jpg"
+          alt="Sample hanging image"
+          className="hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+    </div>
+  );
+}
