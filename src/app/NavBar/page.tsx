@@ -30,7 +30,7 @@ export default function Navbar() {
               <Link href="/" className="text-white text-2xl font-bold">
                 <div className="relative w-[350px] h-[70px] md:w-[400px] md:h-[80px] lg:w-[450px] lg:h-[90px]">
                   <Image
-                    src="/assets/general/Name2.png"
+                    src="./assets/general/Name2.png"
                     alt="Logo"
                     fill
                     className="object-contain"
@@ -69,7 +69,7 @@ export default function Navbar() {
       <div className="sm:hidden bg-black/80 backdrop-blur-md px-4 py-3 flex justify-between items-center">
         <Link href="/" className="relative w-[200px] h-[50px]">
           <Image
-            src="/assets/general/Name2.png"
+            src="./assets/general/Name2.png"
             alt="Logo"
             fill
             className="object-contain"
