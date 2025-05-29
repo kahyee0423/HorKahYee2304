@@ -3,7 +3,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Slider from 'react-slick';
-import type { Settings } from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { piitramData } from '../utils/data';
@@ -12,7 +11,7 @@ import Image from 'next/image';
 
 const Piitram: React.FC = () => {
   const router = useRouter();
-  const sliderRef = useRef<any>(null);
+  const sliderRef = useRef<{ slickNext: () => void; slickPrev: () => void }>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);

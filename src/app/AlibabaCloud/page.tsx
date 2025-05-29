@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { ALIBABA_CERT, ALIBABA_SPECIALTY_CERT } from "../utils/data";
 import AuroraGradientAnimated from "../AuroraGradientAnimated/page";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const AlibabaCloud = () => {
   const router = useRouter();
@@ -82,7 +83,14 @@ const AlibabaCloud = () => {
         </h4>
 
         <div className="relative flex-1 flex justify-center items-center">
-          <img src="/assets/AlibabaCloudPic/ACA.png" alt="ACA pic" className="w-full rounded-lg shadow-lg" />
+          <div className="relative w-full aspect-square">
+            <Image
+              src="/assets/AlibabaCloudPic/ACA.png"
+              alt="ACA pic"
+              fill
+              className="rounded-lg shadow-lg object-contain"
+            />
+          </div>
         </div>
         <div className="ml-4 text-left">
           <p>Credential ID: IACA01241000159425L</p>
@@ -113,11 +121,14 @@ const AlibabaCloud = () => {
             viewport={{ once: true }}
             className="p-4 border border-purple-600 rounded-xl bg-black transition-all duration-300 ease-in-out hover:scale-105"
           >
-            <img
-              src={cert.image}
-              alt={`Specialty Certification ${index + 1}`}
-              className="w-full h-auto rounded-lg mb-4"
-            />
+            <div className="relative w-full aspect-square mb-4">
+              <Image
+                src={cert.image}
+                alt={`Specialty Certification ${index + 1}`}
+                fill
+                className="rounded-lg object-contain"
+              />
+            </div>
             <p className="text-lg font-semibold">Certification Code: {cert.code}</p>
             <p className="text-sm text-gray-300">Expires: {cert.expire}</p>
           </motion.div>
@@ -149,20 +160,24 @@ const AlibabaCloud = () => {
               onMouseEnter={() => setHoveredImage(index)}
               onMouseLeave={() => setHoveredImage(null)}
             >
-              <img
-                src={cert.image1}
-                alt={`Certification ${index + 1}`}
-                className={`w-full p-8 transition-opacity duration-500 ease-in-out ${
-                  hoveredImage === index ? "opacity-0" : "opacity-100"
-                }`}
-              />
-              <img
-                src={cert.image2}
-                alt={`Certification ${index + 1} Hover`}
-                className={`absolute top-0 left-0 w-70 p-8 transition-opacity duration-500 ease-in-out ${
-                  hoveredImage === index ? "opacity-100" : "opacity-0"
-                }`}
-              />
+              <div className="relative w-full aspect-square">
+                <Image
+                  src={cert.image1}
+                  alt={`Certification ${index + 1}`}
+                  fill
+                  className={`p-8 transition-opacity duration-500 ease-in-out object-contain ${
+                    hoveredImage === index ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <Image
+                  src={cert.image2}
+                  alt={`Certification ${index + 1} Hover`}
+                  fill
+                  className={`absolute top-0 left-0 p-8 transition-opacity duration-500 ease-in-out object-contain ${
+                    hoveredImage === index ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              </div>
               <p>Certification Code: {cert.code}</p>
               <p>Expires: {cert.expire}</p>
             </motion.div>
