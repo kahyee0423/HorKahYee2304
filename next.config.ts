@@ -1,7 +1,15 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
+
+const repoName = 'HorKahYee2304' 
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  output: 'export', 
+  basePath: `/${repoName}`,
+  assetPrefix: `/${repoName}/`,
+  images: {
+    unoptimized: true, // Required for GitHub Pages (static export)
+  },
+}
 
-export default nextConfig;
+export default nextConfig
+

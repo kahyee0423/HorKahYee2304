@@ -160,7 +160,7 @@ const CoreTeamGDSC = () => {
                 </>
               )}
 
-              {["hackathon", "speakers", {/*"project-director"*/}].includes(section.type) && (
+              {["hackathon", "speakers", "project-director"].includes(section.type) && (
                 <>
                   <div className="text-white text-center mb-6">
                     <h3 className="text-2xl font-bold">"{section.title}"</h3>
