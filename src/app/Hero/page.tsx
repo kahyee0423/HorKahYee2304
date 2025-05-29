@@ -7,12 +7,10 @@ import { useRouter } from "next/navigation";
 import { SENTENCE_DATA } from "../utils/data";
 import Image from "next/image";
 
-interface HeroSectionProps {
+const HeroSectionComponent: React.FC<{
   isDrawerOpen: boolean;
   setIsDrawerOpen: (isOpen: boolean) => void;
-}
-
-export default function HeroSection({ setIsDrawerOpen }: HeroSectionProps) {
+}> = ({ setIsDrawerOpen }) => {
   const [isPaperVisible, setIsPaperVisible] = useState(false);
   const router = useRouter();
 
@@ -114,33 +112,33 @@ export default function HeroSection({ setIsDrawerOpen }: HeroSectionProps) {
               <h2 className="font-caveat-brush text-2xl mb-4">Here is a Letter for You:</h2>
               <h3 className="text-lg font-bold mb-4">&ldquo;A Glimpse into My Journey&rdquo;</h3>
               <p>
-              She is an accomplished technology enthusiast and certified cloud professional with expertise in cloud computing, artificial intelligence, and data analytics. Holding multiple prestigious credentials, including Google Cloud Data Analytics, Computing Foundations, Cybersecurity Certifications, and Alibaba Cloud Certified Associate, she is also an AWS AI & ML Scholar, continuously expanding her technical expertise through programs like Google Cloud Skill Boost and Alibaba Cloud Academy.
-            </p>
-            <p>
-              A polyglot fluent in seven languages — Chinese, Malay, English, Cantonese, Hokkien, French, and Japanese — she excels in cross-cultural communication and global collaboration. Her leadership acumen is evident through her tenure at Google Developer Group On Campus (GDGoC USM), where she has served as EXCO of the Event Planning and Culture Development (EPCD) Department and now leads the department. As Project Director of TechFest USM, she drives university-wide innovation and industry engagement.
-            </p>
-            <p>
-              With a strong technical portfolio, she has led data-driven projects in predictive analytics for market trends and wine quality by utilizing advanced ML models such as Random Forest Classifier, Support Vector Machines, and Naïve Bayes algorithms. She has also developed object-oriented software solutions in C++, including a bakery management system and AI-powered image classification models that push the boundaries of deep learning.
-            </p>
-            <p>
-              Beyond her technical work, she is a sought-after speaker, event curator, and thought leader. She has emceed high-profile workshops, facilitated technical training sessions, and delivered insightful talks on front-end development with Angular. As a core organizer of national-level hackathons — the MY Universities Hackathon — she plays a key role in fostering technological excellence among emerging innovators. Her contributions have been recognized with accolades such as the Silver Award at PIITRAM 2023 with an official certification from MYIPO for her innovation.
-            </p>
-            <p>
-              Committed to lifelong learning, she actively participates in global programs like Google I/O, AI Skills Quest, GCPBoleh, and The Arcade Program. Currently, she is deepening her expertise in PostgreSQL and Oracle SQL to strengthen her enterprise data management and cloud infrastructure skills.
-            </p>
-            <p>
-              Outside of her professional pursuits, she enjoys badminton, chess, and photography, embodying a well-rounded and dynamic approach to excellence.
-            </p>
+                She is an accomplished technology enthusiast and certified cloud professional with expertise in cloud computing, artificial intelligence, and data analytics. Holding multiple prestigious credentials, including Google Cloud Data Analytics, Computing Foundations, Cybersecurity Certifications, and Alibaba Cloud Certified Associate, she is also an AWS AI & ML Scholar, continuously expanding her technical expertise through programs like Google Cloud Skill Boost and Alibaba Cloud Academy.
+              </p>
+              <p>
+                A polyglot fluent in seven languages — Chinese, Malay, English, Cantonese, Hokkien, French, and Japanese — she excels in cross-cultural communication and global collaboration. Her leadership acumen is evident through her tenure at Google Developer Group On Campus (GDGoC USM), where she has served as EXCO of the Event Planning and Culture Development (EPCD) Department and now leads the department. As Project Director of TechFest USM, she drives university-wide innovation and industry engagement.
+              </p>
+              <p>
+                With a strong technical portfolio, she has led data-driven projects in predictive analytics for market trends and wine quality by utilizing advanced ML models such as Random Forest Classifier, Support Vector Machines, and Naïve Bayes algorithms. She has also developed object-oriented software solutions in C++, including a bakery management system and AI-powered image classification models that push the boundaries of deep learning.
+              </p>
+              <p>
+                Beyond her technical work, she is a sought-after speaker, event curator, and thought leader. She has emceed high-profile workshops, facilitated technical training sessions, and delivered insightful talks on front-end development with Angular. As a core organizer of national-level hackathons — the MY Universities Hackathon — she plays a key role in fostering technological excellence among emerging innovators. Her contributions have been recognized with accolades such as the Silver Award at PIITRAM 2023 with an official certification from MYIPO for her innovation.
+              </p>
+              <p>
+                Committed to lifelong learning, she actively participates in global programs like Google I/O, AI Skills Quest, GCPBoleh, and The Arcade Program. Currently, she is deepening her expertise in PostgreSQL and Oracle SQL to strengthen her enterprise data management and cloud infrastructure skills.
+              </p>
+              <p>
+                Outside of her professional pursuits, she enjoys badminton, chess, and photography, embodying a well-rounded and dynamic approach to excellence.
+              </p>
 
-            {/* Close Button */}
-            <div className="mt-8 flex justify-end">
-              <button
-                onClick={() => setIsPaperVisible(false)}
-                className="px-4 py-2 bg-red-500 mb-3 text-white rounded-lg hover:bg-red-600 transition-colors duration-300 cursor-pointer"
-              >
-                Close
-              </button>
-          </div>
+              {/* Close Button */}
+              <div className="mt-8 flex justify-end">
+                <button
+                  onClick={() => setIsPaperVisible(false)}
+                  className="px-4 py-2 bg-red-500 mb-3 text-white rounded-lg hover:bg-red-600 transition-colors duration-300 cursor-pointer"
+                >
+                  Close
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -167,4 +165,10 @@ export default function HeroSection({ setIsDrawerOpen }: HeroSectionProps) {
       </div>
     </section>
   );
+};
+
+export default function Hero() {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  return <HeroSectionComponent isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />;
 }
