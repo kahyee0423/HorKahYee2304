@@ -27,7 +27,7 @@ const CoreTeamGDSC = () => {
       </div>
 
       {/* Introduction Section */}
-      <div className="flex items-center justify-center w-full max-w-4xl relative p-8 group">
+      <div className="flex items-center justify-center w-auto max-w-4xl relative p-8 group">
         <div className="relative w-60 h-60">
           <Image
             src={TEAM_DATA.introduction.image}
@@ -125,7 +125,7 @@ const CoreTeamGDSC = () => {
                       src={section.image}
                       alt="HOD"
                       fill
-                      className="ml-4 rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
+                      className="ml-4 rounded-lg shadow-lg transition-transform duration-500 hover:scale-105 w-auto"
                     />
                   </div>
                   <div className="text-white mt-5 text-center">
