@@ -1,12 +1,14 @@
 "use client"; 
 
 import { FaLinkedin, FaGithub, FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa";
+import { useState } from "react";
 
 interface ContactDrawerProps {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
 }
-const ContactDrawer = ({ isOpen, setIsOpen }: ContactDrawerProps) => {
+
+const ContactDrawerComponent = ({ isOpen, setIsOpen }: ContactDrawerProps) => {
   return (
     <div className="fixed right-0 top-1/2 transform -translate-y-1/2 z-50 flex items-center">
       {isOpen && (
@@ -83,4 +85,7 @@ const ContactDrawer = ({ isOpen, setIsOpen }: ContactDrawerProps) => {
   );
 };
 
-export default ContactDrawer;
+export default function ContactDrawer() {
+  const [isOpen, setIsOpen] = useState(false);
+  return <ContactDrawerComponent isOpen={isOpen} setIsOpen={setIsOpen} />;
+}
