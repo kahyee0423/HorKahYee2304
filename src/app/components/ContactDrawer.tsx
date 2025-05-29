@@ -2,20 +2,20 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
-export interface ContactDrawerProps {
+type Props = {
   isOpen: boolean;
   setIsOpen: (open: boolean) => void;
-}
+};
 
-const ContactDrawer: React.FC<ContactDrawerProps> = ({ isOpen, setIsOpen }) => {
+export default function ContactDrawer({ isOpen, setIsOpen }: Props) {
   return (
     <motion.div
       initial={{ x: "100%" }}
       animate={{ x: isOpen ? 0 : "100%" }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className={`fixed top-0 right-0 h-full w-80 bg-white shadow-lg z-50 p-6 flex flex-col items-center ${isOpen ? "block" : "hidden"}`}
+      className="fixed top-0 right-0 h-full w-80 bg-white shadow-lg z-50 p-6 flex flex-col items-center"
     >
       <button
         className="self-end text-gray-500 hover:text-gray-800 mb-4"
@@ -27,8 +27,8 @@ const ContactDrawer: React.FC<ContactDrawerProps> = ({ isOpen, setIsOpen }) => {
       <h2 className="text-2xl font-bold mb-6 text-purple-700">Contact Me</h2>
       <div className="flex flex-col space-y-4 w-full">
         <a
-          href="mailto:kahyee.hor@gmail.com"
-          className="flex items-center space-x-3 text-gray-700 hover:text-purple-700 transition-colors"
+          href="mailto:kahyee0423@gmail.com"
+          className="flex items-center space-x-3 text-gray-700 hover:text-red-700"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -37,7 +37,7 @@ const ContactDrawer: React.FC<ContactDrawerProps> = ({ isOpen, setIsOpen }) => {
         </a>
         <a
           href="https://github.com/horkahyee"
-          className="flex items-center space-x-3 text-gray-700 hover:text-purple-700 transition-colors"
+          className="flex items-center space-x-3 text-gray-700 hover:text-black"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -46,7 +46,7 @@ const ContactDrawer: React.FC<ContactDrawerProps> = ({ isOpen, setIsOpen }) => {
         </a>
         <a
           href="https://www.linkedin.com/in/hor-kah-yee/"
-          className="flex items-center space-x-3 text-gray-700 hover:text-purple-700 transition-colors"
+          className="flex items-center space-x-3 text-gray-700 hover:text-blue-700"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -55,7 +55,7 @@ const ContactDrawer: React.FC<ContactDrawerProps> = ({ isOpen, setIsOpen }) => {
         </a>
         <a
           href="https://www.instagram.com/hor.kahyee/"
-          className="flex items-center space-x-3 text-gray-700 hover:text-purple-700 transition-colors"
+          className="flex items-center space-x-3 text-gray-700 hover:text-red-700"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -65,6 +65,4 @@ const ContactDrawer: React.FC<ContactDrawerProps> = ({ isOpen, setIsOpen }) => {
       </div>
     </motion.div>
   );
-};
-
-export default ContactDrawer; 
+}
