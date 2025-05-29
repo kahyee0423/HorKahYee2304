@@ -1,7 +1,11 @@
+"use client"
+
 import { ORACLE_CLOUD } from "../utils/data";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function OracleCloud() {
+    const router = useRouter();
   return (
     <div className="min-h-screen bg-gray-100 py-8 px-6 overflow-y-auto">
       <header className="text-black py-6 text-center">
@@ -15,12 +19,12 @@ export default function OracleCloud() {
               key={cert.id}
               className="bg-white rounded-lg shadow-lg"
             >
-              <div className="relative w-full h-48">
+              <div className="relative w-full h-90">
                 <Image
                   src={cert.image}
                   alt={cert.name}
                   fill
-                  className="object-cover rounded-t-lg"
+                  className="object-contain rounded-t-lg"
                 />
               </div>
               <div className="p-6">
@@ -34,6 +38,16 @@ export default function OracleCloud() {
           ))}
         </div>
       </main>
+
+      {/* Back Button */}
+        <div className="flex justify-center">
+          <button
+            onClick={() => router.push("/")}
+            className="px-6 py-2 sm:px-8 sm:py-3 bg-[#7e61e7] text-white font-bold rounded-lg my-12 outline outline-1.5 outline-transparent transition-all duration-300 ease-in-out hover:bg-black hover:text-[#a993fe] hover:outline-[#a993fe] hover:scale-105 cursor-pointer text-base sm:text-lg"
+          >
+            Back to Home
+          </button>
+        </div>
     </div>
   );
 }
