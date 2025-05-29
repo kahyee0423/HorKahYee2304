@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { CERTIFICATIONS } from "../utils/data";
 
 const getRandomSize = (): number => {
@@ -17,6 +18,7 @@ const cardVariants = {
 };
 
 const CertificationSection = () => {
+  const router = useRouter();
   return (
     <motion.section
       id="certification"
@@ -41,7 +43,7 @@ const CertificationSection = () => {
                 initial="hidden"
                 whileInView="visible"
                 whileHover="hover"
-                onClick={() => window.open(cert.link, "_blank", "noopener,noreferrer")}
+                onClick={() => router.push(cert.link)}
                 style={{ gridRowEnd: `span ${rowSpan}` }}
               >
                 <h3 className="text-xl font-semibold text-white">{cert.title}</h3>
