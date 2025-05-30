@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Caveat, Boogaloo } from 'next/font/google';
+import { Caveat, Boogaloo } from "next/font/google";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SplashScreen from "./components/SplashScreen";
@@ -13,8 +13,8 @@ import Experience from "./Experience/page";
 import Projects from "./Projects/page";
 import Certification from "./Certification/page";
 
-const caveat = Caveat({ subsets: ['latin'], variable: '--font-caveat' });
-const boogaloo = Boogaloo({ subsets: ['latin'], weight: '400', variable: '--font-boogaloo' });
+const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat" });
+const boogaloo = Boogaloo({ subsets: ["latin"], weight: "400", variable: "--font-boogaloo" });
 
 const fadeInVariants = {
   hidden: { opacity: 0 },
@@ -39,7 +39,9 @@ export default function Home() {
       {showSplash ? (
         <SplashScreen onComplete={() => setShowSplash(false)} />
       ) : (
-        <div className={`min-h-screen flex flex-col w-full bg-gradient-to-br from-gray-800 to-purple-900 overflow-y-auto ${caveat.variable} ${boogaloo.variable}`}>
+        <div
+          className={`min-h-screen flex flex-col w-full bg-gradient-to-br from-gray-800 to-purple-900 overflow-y-auto ${caveat.variable} ${boogaloo.variable}`}
+        >
           <Navbar />
           <main className="flex-grow min-h-[calc(100vh-100px)]">
             <motion.section
@@ -49,7 +51,7 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
-              <HeroSection isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
+              <HeroSection isDrawerOpen={isDrawerOpen} />
             </motion.section>
 
             <ContactDrawer isOpen={isDrawerOpen} setIsOpen={setIsDrawerOpen} />
