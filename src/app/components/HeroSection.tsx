@@ -10,10 +10,9 @@ import { DrawerContext } from "../ClientLayout";
 
 export interface HeroSectionProps {
   isDrawerOpen: boolean;
-  setIsDrawerOpen: (isOpen: boolean) => void;
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({ setIsDrawerOpen }) => {
+const HeroSection: React.FC<HeroSectionProps> = () => {
   const [isPaperVisible, setIsPaperVisible] = useState(false);
   const router = useRouter();
   const { openDrawer } = useContext(DrawerContext);
