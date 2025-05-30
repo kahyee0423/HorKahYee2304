@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { SENTENCE_DATA } from "../utils/data";
 import Image from "next/image";
+import { DrawerContext } from "../ClientLayout";
 
 export interface HeroSectionProps {
   isDrawerOpen: boolean;
@@ -15,6 +16,7 @@ export interface HeroSectionProps {
 const HeroSection: React.FC<HeroSectionProps> = ({ setIsDrawerOpen }) => {
   const [isPaperVisible, setIsPaperVisible] = useState(false);
   const router = useRouter();
+  const { openDrawer } = useContext(DrawerContext);
 
   const sentences = SENTENCE_DATA.map((data) => data.text);
 
@@ -64,7 +66,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ setIsDrawerOpen }) => {
               Click Here to View My Resume
             </a>
             <button
-              onClick={() => setIsDrawerOpen(true)}
+              onClick={openDrawer}
               className="inline-block px-8 py-3 bg-gradient-to-r from-[#a993fe] to-[#7e61e7] text-white font-bold rounded-lg mt-[70px] outline outline-1.5 outline-transparent transition-all duration-300 ease-in-out hover:bg-black hover:from-transparent hover:to-transparent hover:text-[#a993fe] hover:outline-[#a993fe] cursor-pointer"
             >
               Get in Touch
