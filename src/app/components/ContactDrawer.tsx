@@ -63,6 +63,18 @@ export default function ContactDrawer({ isOpen, setIsOpen }: Props) {
           <span>Instagram</span>
         </a>
       </div>
+
+      {/* LinkedIn Follow Button */}
+      <div className="mt-8">
+        <a
+          href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=kahyee0423"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-center text-white bg-[#0A66C2] hover:bg-[#004182] px-4 py-2 rounded-full w-48 font-medium"
+        >
+          Follow on LinkedIn
+        </a>
+      </div>
     </motion.div>
   );
 }
