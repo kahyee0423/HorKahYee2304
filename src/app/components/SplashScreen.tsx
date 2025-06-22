@@ -15,8 +15,12 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    const animationTimer = setTimeout(() => setShowImage(true), 1000);
+    const animationTimer = setTimeout(() => {
+      setShowImage(true);
+    }, 1000);
+
     const completionTimer = setTimeout(() => {
+      console.log("Splash done — calling onComplete");
       setIsVisible(false);
       onComplete();
     }, 3000);
@@ -30,25 +34,23 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 w-full h-full flex justify-center items-center bg-gradient-to-br from-blue-500 to-purple-600">
-      <div className="absolute inset-0 z-0">
-        <Canvas camera={{ position: [0, 0, 5] }}>
-          <ambientLight intensity={0.5} />
-          <pointLight position={[10, 10, 10]} />
-          <Sparkles
-            count={100}
-            size={2}
-            speed={0.8}
-            color="#ffffff"
-            position={[0, 0, 0]}
-            scale={[10, 10, 10]}
-          />
-          <OrbitControls enabled={!showImage} />
-        </Canvas>
-      </div>
+    <div className="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-gradient-to-br from-blue-500 to-purple-600">
+      <Canvas camera={{ position: [0, 0, 5] }}>
+        <ambientLight intensity={0.5} />
+        <pointLight position={[10, 10, 10]} />
+        <Sparkles
+          count={100}
+          size={2}
+          speed={0.8}
+          color="#ffffff"
+          position={[0, 0, 0]}
+          scale={[10, 10, 10]}
+        />
+        <OrbitControls enabled={!showImage} />
+      </Canvas>
 
       <motion.div
-        className="absolute z-10 text-white text-center px-4 max-w-[100%] sm:max-w-xl"
+        className="absolute w-[90%] max-w-screen-lg text-white text-center"
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
@@ -56,27 +58,26 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
         }}
         transition={{ opacity: { duration: 1 }, y: { duration: 1 } }}
       >
-        <h1 className="text-2xl sm:text-4xl font-bold">
+        <h1 className="text-4xl font-bold">
           Immerse yourself in Kah Yee&apos;s portfolio
         </h1>
-        <p className="mt-2 sm:mt-4 text-base sm:text-lg">
+        <p className="mt-4 text-lg">
           A showcase of sophisticated achievements and visionary craftsmanship
         </p>
       </motion.div>
 
       {showImage && (
         <motion.div
-          className="absolute z-10 top-12 sm:top-20 left-1/2 transform -translate-x-1/2 w-[60vw] max-w-xs sm:max-w-sm md:max-w-md aspect-video relative"
+          className="absolute top-20 left-1/2 transform -translate-x-1/2 w-100 h-100"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
           <Image
-            src="./assets/general/splash-pic-name.png" 
+            src="./assets/general/splash-pic-name.png"
             alt="Portfolio showcase"
             fill
             className="object-contain"
-            priority
           />
         </motion.div>
       )}
