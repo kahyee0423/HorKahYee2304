@@ -48,7 +48,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
       </div>
 
       <motion.div
-        className="absolute z-10 text-white text-center px-4 max-w-[90%] sm:max-w-xl"
+        className="absolute z-10 text-white text-center px-4 max-w-[100%] sm:max-w-xl"
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
@@ -72,7 +72,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
           transition={{ duration: 1 }}
         >
           <Image
-            src="/assets/general/splash-pic-name.png" 
+            src="./assets/general/splash-pic-name.png" 
             alt="Portfolio showcase"
             fill
             className="object-contain"
