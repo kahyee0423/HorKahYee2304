@@ -68,7 +68,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
 
       {showImage && (
         <motion.div
-          className="absolute top-20 left-1/2 transform -translate-x-1/2 w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80"
+          className="absolute top-20 left-1/2 transform -translate-x-1/2 w-100 h-100 sm:w-72 sm:h-72 md:w-80 md:h-80"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
