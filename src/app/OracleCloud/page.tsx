@@ -29,7 +29,6 @@ export default function OracleCloud() {
               </div>
               <div className="p-6">
                 <h2 className="text-xl font-semibold mb-2">{cert.name}</h2>
-                <p className="text-gray-600">ID: {cert.id}</p>
                 <p className="text-gray-600">
                   Obtained Date: {cert.obtainedDate}
                 </p>
