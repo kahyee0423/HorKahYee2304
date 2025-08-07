@@ -3,27 +3,6 @@
 import React from "react";
 import ExperienceCard from "../../components/ExperienceCard";
 
-const sampleExperiences = [
-  {
-    title: "Software Engineer",
-    date: "2023 - Present",
-    details: [
-      "Developed and maintained web applications using React and Next.js",
-      "Implemented responsive designs and optimized performance",
-      "Collaborated with cross-functional teams on project delivery"
-    ]
-  },
-  {
-    title: "Frontend Developer",
-    date: "2022 - 2023",
-    details: [
-      "Built user interfaces with modern JavaScript frameworks",
-      "Created reusable components and maintained code quality",
-      "Worked on improving application accessibility"
-    ]
-  }
-];
-
 export default function ExperienceCardPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 p-8">
