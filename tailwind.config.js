@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         caveat: ["Caveat Brush", "cursive"],
-        poppins: ["Poppins", ...fontFamily.sans] // Add custom font
+        poppins: ["Poppins", ...fontFamily.sans]
       },
       keyframes: {
         'fade-in': {
