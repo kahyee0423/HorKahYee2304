@@ -1185,6 +1185,40 @@ export const PROJECTS= [
     githubLink: "https://github.com/kahyee0423/Image-Classifier.git",
     Contributor: "Hor Kah Yee"
   },
+  {
+    id: 4,
+    title: "FuelVista",
+    images: [
+      "./assets/project/fuel-vista/Price_tab.png",
+      "./assets/project/fuel-vista/weekly_changes.png",
+      "./assets/project/fuel-vista/price_forecast.png",
+      "./assets/project/fuel-vista/fuel_calc.png",
+      "./assets/project/fuel-vista/alert.png"
+    ],
+    description: "FuelVista is a single-page application (SPA) that provides an interactive dashboard for tracking fuel prices and trends in Malaysia. It offers real-time fuel prices, weekly fluctuations, AI-powered price forecasts, a fuel cost calculator and Telegram alert notifications—all without full-page reloads. Users can easily view current RON95, RON97 and Diesel prices, track weekly changes with interactive charts, predict future prices via TensorFlow models, calculate travel fuel costs and receive alerts when prices hit user-defined thresholds. Built with a modern full-stack architecture, FuelVista uses Next.js, React and Tailwind CSS on the frontend; Node.js and Firebase on the backend and TensorFlow for AI forecasting. Alerts are delivered through a Telegram bot, with data sourced from official channels and cached in Firebase. FuelVista supports SDG 9 by enhancing technological innovation in fuel tracking, offering predictive analytics and promoting smarter transportation planning.",
+    techStack: ["Nextjs", "Tailwind CSS", "Python", "Tensorflow", "Firebase", "Node.js", "Telegram Bot"],
+    githubLink: "https://github.com/kahyee0423/FuelVista.git",
+    Contributor: "Hor Kah Yee"
+  },
+  {
+    id: 5,
+    title: "SECOM Predictive Maintenance",
+    images: [
+      "./assets/project/secom/1.png",
+      "./assets/project/secom/2.png",
+      "./assets/project/secom/3.png",
+      "./assets/project/secom/4.png",
+      "./assets/project/secom/5.png",
+      "./assets/project/secom/6.png",
+      "./assets/project/secom/7.png",
+      "./assets/project/secom/8.png",
+      "./assets/project/secom/9.png",
+    ],
+    description: "I developed SECOM Predictive Maintenance, which is a machine learning project to predict failures in semiconductor manufacturing using the SECOM dataset. I built a full pipeline covering data cleaning, preprocessing, feature selection, model training (RandomForest, XGBoost, Neural Network), threshold tuning, evaluation and predictions on new data. I handled challenges such as imbalanced classes, high dimensionality, missing values and noisy features. My preprocessing included scaling, feature selection and correlation removal, while model training applied SMOTE and class weighting to address imbalance. I evaluated the models using Precision, Recall, F1-score, ROC-AUC, and PR-AUC, with XGBoost emerging as the best-performing model based on a combined score. I noted limitations like minority class prediction challenges, potential overfitting, and reliance on a single train-test split. I can make predictions by loading the trained model and preprocessing artifacts, generating PASS/FAIL results for new input data.",
+    techStack: ["Python", "XGBoost", "Neural Network", "Tensorflow", "Random Forest", "SMOTE", "JSON", "pandas", "scikit-learn", "NumPy", "Jupyter Notebook"],
+    githubLink: "https://github.com/kahyee0423/secom-predictive-maintenance.git",
+    Contributor: "Hor Kah Yee"
+  },
 ];
 
 export const CERTIFICATIONS = [
