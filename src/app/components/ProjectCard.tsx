@@ -33,7 +33,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick 
       }`}
       onClick={onClick}
     >
-      {/* Swiper Carousel for Images */}
       <div className={`w-full ${isExpanded ? "h-96" : "h-48"} overflow-hidden transition-all duration-500 ease-in-out`}>
         <Swiper
           modules={[Pagination, Autoplay]}
@@ -41,17 +40,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick 
           slidesPerView={1}
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
-          loop
+          loop={true}
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-full">
+              <div className="relative w-full aspect-[4/3]">
                 <Image
                   src={image}
                   alt={`${project.title} - ${index + 1}`}
                   fill
-                  className="object-contain" 
-                  sizes="100vw"
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 60vw"
                 />
               </div>
             </SwiperSlide>
