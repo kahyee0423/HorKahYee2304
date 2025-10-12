@@ -41,17 +41,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick 
           slidesPerView={1}
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
-          loop={true}
+          loop
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full aspect-[4/3]">
+              <div className="relative w-full h-full">
                 <Image
                   src={image}
                   alt={`${project.title} - ${index + 1}`}
                   fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 60vw"
+                  className="object-contain" 
+                  sizes="100vw"
                 />
               </div>
             </SwiperSlide>
