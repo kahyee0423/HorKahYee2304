@@ -1219,6 +1219,38 @@ export const PROJECTS= [
     githubLink: "https://github.com/kahyee0423/secom-predictive-maintenance.git",
     Contributor: "Hor Kah Yee"
   },
+  {
+    id: 6,
+    title: "Secure Translation API Gateway with Apigee X",
+    images: [
+      "./assets/project/apigee/1.png",
+      "./assets/project/apigee/2.png",
+      "./assets/project/apigee/3.png",
+      "./assets/project/apigee/4.png",
+      "./assets/project/apigee/5.png",
+      "./assets/project/apigee/6.png",
+      "./assets/project/apigee/7.png",
+      "./assets/project/apigee/8.png",
+      "./assets/project/apigee/9.png",
+      "./assets/project/apigee/10.png",
+      "./assets/project/apigee/11.png",
+      "./assets/project/apigee/12.png",
+      "./assets/project/apigee/13.png",
+      "./assets/project/apigee/14.png",
+      "./assets/project/apigee/15.png",
+      "./assets/project/apigee/16.png",
+      "./assets/project/apigee/17.png",
+      "./assets/project/apigee/18.png",
+      "./assets/project/apigee/19.png",
+      "./assets/project/apigee/20.png",
+      "./assets/project/apigee/21.png",
+      "./assets/project/apigee/22.png",
+      "./assets/project/apigee/23.png",
+    ],
+    description: "I designed and secured a Translation API for a mock retail company using Google Cloud Apigee X, creating a multilingual, developer-friendly and secure interface over Google's Translation API. I implemented API proxies, products and policies to handle authentication, rate limiting, error handling and request/response transformation to ensure that clients never access the backend directly. I integrated Cloud Logging to monitor every request and response, improving observability and debugging. Through end-to-end testing, I verified that access control, quotas and error handling worked correctly and providing a reliable and user-friendly experience. This project gave me hands-on experience in API management, security and observability, and the architecture can be extended to securely expose AI inference APIs while maintaining privacy and system resilience.",
+    techStack: ["Google Cloud Apigee X", "Google Cloud Translation API", "Cloud Logging", "IAM", "API", "Google Cloud Platform (GCP)"],
+    Contributor: "Hor Kah Yee"
+  },
 ];
 
 export const CERTIFICATIONS = [
