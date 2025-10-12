@@ -33,7 +33,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick 
       }`}
       onClick={onClick}
     >
-      <div className={`w-full ${isExpanded ? "h-96" : "h-48"} overflow-hidden transition-all duration-500 ease-in-out`}>
+      <div className={`w-full ${isExpanded ? "h-[250px]" : "h-48"} overflow-hidden transition-all duration-500 ease-in-out`}>
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={10}
