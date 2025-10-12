@@ -44,13 +44,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick 
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full aspect-[4/3]">
+              <div className="relative w-full h-40 md:h-48 flex justify-center items-center bg-gray-100">
                 <Image
                   src={image}
                   alt={`${project.title} - ${index + 1}`}
                   fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 60vw"
+                  className="object-contain"
+                  sizes="100vw"
                 />
               </div>
             </SwiperSlide>
