@@ -1249,6 +1249,19 @@ export const PROJECTS= [
     ],
     description: "I designed and secured a Translation API for a mock retail company using Google Cloud Apigee X, creating a multilingual, developer-friendly and secure interface over Google's Translation API. I implemented API proxies, products and policies to handle authentication, rate limiting, error handling and request/response transformation to ensure that clients never access the backend directly. I integrated Cloud Logging to monitor every request and response, improving observability and debugging. Through end-to-end testing, I verified that access control, quotas and error handling worked correctly and providing a reliable and user-friendly experience. This project gave me hands-on experience in API management, security and observability, and the architecture can be extended to securely expose AI inference APIs while maintaining privacy and system resilience.",
     techStack: ["Google Cloud Apigee X", "Google Cloud Translation API", "Cloud Logging", "IAM", "API", "Google Cloud Platform (GCP)"],
+    githubLink:"",
+    Contributor: "Hor Kah Yee"
+  },
+  {
+    id: 7,
+    title: "GitOps-style Continuous Delivery For Kubernetes Engine With Cloud Build",
+    images: [
+      "./assets/project/git/cloud-build-1.png",
+      "./assets/project/git/cloud-build-2.png"
+    ],
+    description: "I built a GitOps-style CI/CD pipeline for Kubernetes Engine using Google Cloud Build. By treating environments-as-code, I store deployment manifests in a Git repo. When I push changes to the app repo, Cloud Build tests the code, builds and pushes the container image to Artifact Registry and updates the manifests. The candidate branch tracks deployments, while the production branch records successful ones.This lets me monitor builds, view logs and rollback if needed. The project gave me hands-on experience automating CI/CD, managing Kubernetes deployments and applying GitOps principles.",
+    techStack: ["Google Cloud Build", "Artifact Registry", "GKE", "Git", "YAML", "Docker"],
+    githubLink: "https://github.com/kahyee0423/hello-cloudbuild-app.git",
     Contributor: "Hor Kah Yee"
   },
 ];
