@@ -33,7 +33,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick 
       }`}
       onClick={onClick}
     >
-      <div className={`w-full ${isExpanded ? "h-96" : "h-48"} overflow-hidden transition-all duration-500 ease-in-out`}>
+      <div className={`w-full overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? "h-[500px]" : "h-48"}`}>
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={10}
@@ -44,7 +44,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick 
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-40 md:h-48 flex justify-center items-center bg-gray-100">
+              <div className={`relative w-full h-full flex justify-center items-center bg-gray-100`}>
                 <Image
                   src={image}
                   alt={`${project.title} - ${index + 1}`}
@@ -57,7 +57,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick 
           ))}
         </Swiper>
       </div>
-
       <div className="p-6">
         <h2 className="text-xl font-bold mb-2">{project.title}</h2>
         <div className="flex flex-wrap gap-2 mb-4">
