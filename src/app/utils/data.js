@@ -1147,7 +1147,17 @@ export const PROJECTS= [
   {
     id: 1,
     title: "Thrift And Thrive",
-    images: ["/assets/project/t-t/1.png"],
+    images: [
+      "./assets/project/t-t/1.png",
+      "./assets/project/t-t/2.png",
+      "./assets/project/t-t/3.png",
+      "./assets/project/t-t/4.png",
+      "./assets/project/t-t/5.png",
+      "./assets/project/t-t/6.png",
+      "./assets/project/t-t/7.png",
+      "./assets/project/t-t/8.png",
+      "./assets/project/t-t/9.png"
+    ],
     description: "This project focuses on developing an e-commerce website dedicated to the buying and selling of preloved clothing items. The platform aims to contribute to sustainable fashion by encouraging the reuse and recycling of apparel and accessories. Inspired by major e-commerce platforms like Shopee, Lazada and Carousell, the website is designed to offer a user-friendly shopping experience while promoting environmentally conscious consumer behavior. The initiative aligns with Sustainable Development Goal (SDG) 12, particularly Target 12.5, which focuses on substantially reducing waste generation through prevention, reduction, recycling and reuse.",
     techStack: ["ReactJS", "Java", "CSS"],
     githubLink: "https://github.com/kahyee0423/Thrift-and-Thrive-frontend.git",
@@ -1156,7 +1166,11 @@ export const PROJECTS= [
   {
     id: 2,
     title: "Use a Pre-trained Image Classifier to Identify Dog Breeds",
-    images: ["/assets/project/pre-trained-identify-dog-breeds/1.png"],
+    images: [
+      "./assets/project/pre-trained-identify-dog-breeds/1.png",
+      "./assets/project/pre-trained-identify-dog-breeds/2.png",
+      "./assets/project/pre-trained-identify-dog-breeds/3.png"
+    ],
     description: "This project involved analyzing the performance of three pre-trained Convolutional Neural Network (CNN) architectures - ResNet, AlexNet, and VGG for an image classification task simulating a city dog show registration system. Utilizing Python, I processed image data, compared predicted labels against actual labels, and calculated performance metrics to determine the best architecture for classifying images as either 'dog' or 'not dog' and accurately identifying dog breeds. While AlexNet achieved the same level of accuracy for dog and non-dog images, the number of breeds classified correctly was only 80%, compared to the VGG and ResNet 93.33% and 90% respectively. The analysis revealed that VGG achieved the highest overall performance, correctly identifying all dog and non-dog images and also achieving the highest breed classification accuracy, offering a practical understanding of CNN architecture performance and Python's role in image data analysis.",
     techStack: ["Python", "Jupyter Notebook", "Shell"],
     githubLink: "https://github.com/kahyee0423/Use-a-Pre-trained-Image-Classifier-to-Identify-Dog-Breeds.git",
@@ -1165,7 +1179,7 @@ export const PROJECTS= [
   {
     id: 3,
     title: "Image Classifier",
-    images: ["/assets/project/image-classifier/1.png"],
+    images: ["./assets/project/image-classifier/1.png"],
     description: "This project is a flower image classifier built using PyTorch, fine-tuning a pre-trained VGG16 convolutional neural network (CNN) to recognize different flower species. The project encompasses the complete machine learning pipeline: data loading and transformation, model definition, training, validation, and testing, and includes the functionality to load saved model checkpoints. A key feature is a sanity check, displaying the original image alongside a bar chart of the top predicted flower species with their probabilities, promoting interpretability. Through this project, I gained practical experience with PyTorch for model building, training, and optimization, including harnessing CUDA for accelerated computation. I mastered image preprocessing techniques using Torchvision and PIL, and proficiently handled data with NumPy. Furthermore, I gained hands-on experience with transfer learning using pre-trained models, model persistence through saving and loading, and data visualization using Matplotlib. The project solidified my understanding of the entire machine learning pipeline, from data preparation to model deployment, and strengthened my grasp of fundamental deep learning concepts.",
     techStack: ["Python", "Jupyter Notebook", "Pytorch", "CNN"],
     githubLink: "https://github.com/kahyee0423/Image-Classifier.git",

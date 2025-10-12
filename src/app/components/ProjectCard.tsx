@@ -1,8 +1,9 @@
+'use client';
+
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 
@@ -24,8 +25,6 @@ export interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick }) => {
-  const images = Array.isArray(project.images) ? project.images : [project.images || ""];
-
   return (
     <div
       className={`bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-all duration-500 ease-in-out ${
@@ -36,21 +35,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick 
       {/* Swiper Carousel for Images */}
       <div className={`w-full ${isExpanded ? "h-96" : "h-48"} overflow-hidden transition-all duration-500 ease-in-out`}>
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Pagination, Autoplay]}
           spaceBetween={10}
           slidesPerView={1}
-          navigation
           pagination={{ clickable: true }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           loop
         >
-          {images.map((image, index) => (
+          {project.images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-full">
+              <div className="relative w-full aspect-[4/3]">
                 <Image
                   src={image}
                   alt={`${project.title} - ${index + 1}`}
                   fill
-                  className="object-cover"
+                  className="object-contain rounded-lg shadow-md transition-transform duration-500 hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 60vw"
                 />
               </div>
             </SwiperSlide>
@@ -58,10 +58,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick 
         </Swiper>
       </div>
 
+      {/* Project Info */}
       <div className="p-6">
         <h2 className="text-xl font-bold mb-2">{project.title}</h2>
         <div className="flex flex-wrap gap-2 mb-4">
-          {project.techStack.map((tech: string, index: number) => (
+          {project.techStack.map((tech, index) => (
             <span
               key={index}
               className="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full"
@@ -70,6 +71,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick 
             </span>
           ))}
         </div>
+
         {isExpanded && (
           <>
             <p className="text-gray-600 mb-4">{project.description}</p>
@@ -93,4 +95,4 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isExpanded, onClick 
   );
 };
 
-export default ProjectCard; 
+export default ProjectCard;
