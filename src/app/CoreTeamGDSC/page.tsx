@@ -20,7 +20,7 @@ const CoreTeamGDSC = () => {
     <div className="min-h-screen w-full bg-gradient-to-b from-[#87ceeb] via-[#5a6ae1] to-[#00008b] flex flex-col items-center overflow-x-hidden">
       {/* Header Section */}
       <div className="w-full text-center py-5 text-white px-4">
-        <h1 className="font-boogaloo text-4xl sm:text-5xl lg:text-6xl sm:mt-6">
+        <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl sm:mt-6">
           My Journey As An
           <span className="opacity-0 animate-revealText"> EPCD Member </span>
           of GDSC USM
@@ -109,7 +109,7 @@ const CoreTeamGDSC = () => {
             />
           </div>
           <div className="text-left text-white w-full lg:w-1/2 flex flex-col justify-center">
-            <h3 className="text-2xl sm:text-3xl font-bold">{TEAM_DATA.certification.title}</h3>
+            <h3 className="text-xl sm:text-3xl font-bold">{TEAM_DATA.certification.title}</h3>
             <p className="italic mt-3 sm:mt-4 text-base sm:text-lg">{TEAM_DATA.certification.description}</p>
           </div>
         </div>
