@@ -116,7 +116,7 @@ const CoreTeamGDSC = () => {
 
         {/* Leading the Way Section */}
         <div className="w-full my-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-boogaloo text-white text-center mb-8 sm:mb-12 drop-shadow-lg">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-8 sm:mb-12 drop-shadow-lg">
             {TEAM_DATA.leadingTheWay.title}
           </h2>
 
