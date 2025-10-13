@@ -1443,7 +1443,7 @@ export const TEAM_DATA = {
           "./assets/build-ai/1.jpeg",
           "./assets/build-ai/2.png",
           "./assets/build-ai/3.png",
-          "./assets/buila-ai/4.jpeg",
+          "./assets/build-ai/4.jpeg",
         ],
       },
       {
