@@ -1249,7 +1249,7 @@ export const PROJECTS= [
     ],
     description: "I designed and secured a Translation API for a mock retail company using Google Cloud Apigee X, creating a multilingual, developer-friendly and secure interface over Google's Translation API. I implemented API proxies, products and policies to handle authentication, rate limiting, error handling and request/response transformation to ensure that clients never access the backend directly. I integrated Cloud Logging to monitor every request and response, improving observability and debugging. Through end-to-end testing, I verified that access control, quotas and error handling worked correctly and providing a reliable and user-friendly experience. This project gave me hands-on experience in API management, security and observability, and the architecture can be extended to securely expose AI inference APIs while maintaining privacy and system resilience.",
     techStack: ["Google Cloud Apigee X", "Google Cloud Translation API", "Cloud Logging", "IAM", "API", "Google Cloud Platform (GCP)"],
-    githubLink:"",
+    presentationLink: "https://docs.google.com/presentation/d/1MLwVOLpvIQKpwH1SdkOX-IRq5RdsR5LesTM_y3QfkpY/edit?usp=sharing",
     Contributor: "Hor Kah Yee"
   },
   {
