@@ -1434,6 +1434,32 @@ export const TEAM_DATA = {
           "./assets/TechFestPic/img-36.jpg"
         ],
       },
+      {
+        type: "build-ai",
+        title: "Project Director at Build with AI USM Series",
+        description:
+          "Led a four-part online workshop on AI technologies (Gemini, Vertex AI, LLMs) with Google Developer Experts, engaging 686 participants and achieving a 68% final-session return rate",
+        carouselImages: [
+          "./assets/build-ai/1.jpeg",
+          "./assets/build-ai/2.png",
+          "./assets/build-ai/3.png",
+          "./assets/buila-ai/4.jpeg",
+        ],
+      },
+      {
+        type: "cloud",
+        title: "Project Director at Cloud Study Jam USM",
+        description:
+          "Organized a hands-on Google Cloud program featuring Gemini Multimodality + RAG and Document AI tracks, guiding students through labs, peer mentoring and real-world cloud projects.",
+        carouselImages: [
+          "./assets/cloud/1.jpg",
+          "./assets/cloud/2.jpg",
+          "./assets/cloud/3.jpg",
+          "./assets/cloud/4.jpg",
+          "./assets/cloud/5.jpg",
+          "./assets/cloud/6.jpg",
+        ],
+      },
     ],
   },
 };
