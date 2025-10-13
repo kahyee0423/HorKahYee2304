@@ -1179,7 +1179,11 @@ export const PROJECTS= [
   {
     id: 3,
     title: "Image Classifier",
-    images: ["./assets/project/image-classifier/1.png"],
+    images: [
+      "./assets/project/image-classifier/1.png",
+      "./assets/project/image-classifier/2.png",
+      "./assets/project/image-classifier/3.png",
+    ],
     description: "This project is a flower image classifier built using PyTorch, fine-tuning a pre-trained VGG16 convolutional neural network (CNN) to recognize different flower species. The project encompasses the complete machine learning pipeline: data loading and transformation, model definition, training, validation, and testing, and includes the functionality to load saved model checkpoints. A key feature is a sanity check, displaying the original image alongside a bar chart of the top predicted flower species with their probabilities, promoting interpretability. Through this project, I gained practical experience with PyTorch for model building, training, and optimization, including harnessing CUDA for accelerated computation. I mastered image preprocessing techniques using Torchvision and PIL, and proficiently handled data with NumPy. Furthermore, I gained hands-on experience with transfer learning using pre-trained models, model persistence through saving and loading, and data visualization using Matplotlib. The project solidified my understanding of the entire machine learning pipeline, from data preparation to model deployment, and strengthened my grasp of fundamental deep learning concepts.",
     techStack: ["Python", "Jupyter Notebook", "Pytorch", "CNN"],
     githubLink: "https://github.com/kahyee0423/Image-Classifier.git",
