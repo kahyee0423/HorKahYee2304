@@ -1457,7 +1457,7 @@ export const TEAM_DATA = {
           "./assets/cloud/3.jpg",
           "./assets/cloud/4.jpg",
           "./assets/cloud/5.jpg",
-          "./assets/cloud/6.jpg",
+          "./assets/cloud/6.JPG",
         ],
       },
     ],
